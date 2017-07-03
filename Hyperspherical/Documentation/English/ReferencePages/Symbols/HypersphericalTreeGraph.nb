@@ -1,0 +1,2215 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     84696,       2205]
+NotebookOptionsPosition[     71387,       1855]
+NotebookOutlinePosition[     73723,       1916]
+CellTagsIndexPosition[     73637,       1911]
+WindowTitle->HypersphericalTreeGraph
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["HYPERSPHERICAL SYMBOL", "PacletNameCell",ExpressionUUID->
+     "07c57be9-72bd-49c3-af1a-84b58511c586"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"ab57f8ba-cdf1-4d96-ad85-3ce450c16dfa"],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Hyperspherical Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/tutorial/HypersphericalPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "15c91095-2562-470f-ba78-2ebef8aec583"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"1b3e694f-5aee-473d-b60c-aafd83412a7f"],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"BinaryTreeGraphQ\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/ref/BinaryTreeGraphQ"], "\<\"TreeGraph\"\>":>
+       Documentation`HelpLookup["paclet:ref/TreeGraph"], "\<\"Graph\"\>":>
+       Documentation`HelpLookup["paclet:ref/Graph"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c4b41e07-bfa0-4bec-aabc-bcb466fe2ad9"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"35cbeec2-b1de-46f8-bcd3-b4a0d0ddb40b"],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Hyperspherical Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/guide/HypersphericalPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "5e25b1ae-33d6-41b9-80b7-0c16dcaf2311"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"807e732a-e52e-4286-aaa6-5e06c5bc9552"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"Hyperspherical/ref/HypersphericalTreeGraph\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Hyperspherical/ref/HypersphericalTreeGraph"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Hyperspherical/ref/\
+HypersphericalTreeGraph.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$8919], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "Hyperspherical/ref/HypersphericalTreeGraph", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "587a8710-f20d-44c1-b803-02f58447157c"]
+    }], "AnchorBar",ExpressionUUID->"cb284e30-ab11-4ad9-ac05-50601eeaa869"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"8171521d-f470-4582-8c27-16f009d7089c"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["HypersphericalTreeGraph", "ObjectName",ExpressionUUID->
+  "a8418723-e7ad-4940-ac24-71484238aa86"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8],
+   Selectable->False]],ExpressionUUID->"e3553a13-98b2-46ab-83c0-9defebac9127"],
+ Cell[BoxData[
+ ""], "ObjectNameTranslation",ExpressionUUID->
+  "2e297509-9b67-4611-b704-65819f6576d0"]
+}], "ObjectNameGrid",ExpressionUUID->"411e3874-7879-4777-92f3-c225207d8dd4"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"HypersphericalTreeGraph", "[", 
+       StyleBox["n", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+      "052545f5-6f02-4d23-8e3e-126acaea18ee"],
+     " \[LineSeparator]creates a canonical hyperspherical tree graph with ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula",ExpressionUUID->
+      "c74e6a95-d71a-42b9-8d09-d9029f11e48c"],
+     " leaves."
+    }],ExpressionUUID->"a88f37e3-8ad7-477e-b2e3-e2d1a8b7be77"]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       RowBox[{"HypersphericalTreeGraph", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["b", "TI"], 
+           StyleBox["1", "TR"]], ",", " ", 
+          SubscriptBox[
+           StyleBox["b", "TI"], 
+           StyleBox["2", "TR"]], ",", " ", 
+          StyleBox["\[Ellipsis]", "TR"]}]}]}], "]"}]], "InlineFormula",
+      ExpressionUUID->"5e29ff0c-c7fe-4ffb-8d0f-46f17fa2381a"],
+     "\[LineSeparator]creates a hyperspherical tree graph with the branching \
+edges ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["b", "TI"], 
+       StyleBox["j", "TI"]]], "InlineFormula",ExpressionUUID->
+      "79c81302-5ad1-4fc3-9fb8-fa93b5b394ce"],
+     "."
+    }],ExpressionUUID->"20bd957b-d4dc-434e-b802-bb1dde843ccc"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436,ExpressionUUID->"dfa541e4-e5bc-4aec-b825-0ae14d4d6425"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6],
+     Selectable->False]],ExpressionUUID->
+    "c8f18ed4-ea80-4f8b-8e02-7d6f0f23340a"],
+   "Details"
+  }], "NotesFrameText",ExpressionUUID->"6f52df45-a208-4097-bb12-53080ff0d214"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"fd00dd07-6aa6-46a5-8461-e3caa9e18826"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->112940134,ExpressionUUID->"71313527-2e9d-4de6-affc-6cd4e11e4c3f"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"06e16662-7db5-4b0b-b844-9a9bedbebef6"],
+
+Cell["\<\
+A hyperspherical tree graph is a directed binary tree graph where the branch \
+leaving a vertex is left or right oriented. The graph is directed from the \
+root to the leaves.\
+\>", "Notes",
+ CellID->1067943069,ExpressionUUID->"54267a8c-f5b5-4d8b-9655-14ec6b622a28"],
+
+Cell[TextData[{
+ "Because ",
+ ButtonBox["Graph",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Graph"],
+ " expressions do not have any meaning w.r.t. the orientation of edges, the \
+orientation in a hyperspherical tree graph is encoded by inert wrappers \
+around the vertices:"
+}], "Notes",
+ CellID->372477616,ExpressionUUID->"9054181e-e5e6-4bff-af0e-09ffd6e88b0c"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4dc383d3-1960-4c5d-9b23-8607ec1b019a"], 
+    ButtonBox["iL",
+     BaseStyle->"Link",
+     ButtonData->"paclet:Hyperspherical/ref/iL"], Cell[
+    "Indicates a left-oriented vertex.", "TableText",ExpressionUUID->
+     "eab07c35-a241-4589-9de1-8c88e4e70b86"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4a1d5ec3-aa51-4cc0-9204-fa3357f0efd4"], 
+    ButtonBox["iR",
+     BaseStyle->"Link",
+     ButtonData->"paclet:Hyperspherical/ref/iR"], Cell[
+    "Indicates a right-oriented vertex.", "TableText",ExpressionUUID->
+     "1a8f91a8-057c-4e94-ab6c-b5e4dcca7a9f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "a05167fc-eed3-489b-8aab-ebf274aa62c0"], 
+    ButtonBox["iRoot",
+     BaseStyle->"Link",
+     ButtonData->"paclet:Hyperspherical/ref/iRoot"], Cell[
+    "Indicates the root vertex of the tree. ", "TableText",ExpressionUUID->
+     "b374b0f8-6c58-4337-8fe3-c4614d76a4db"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True}}}},
+ CellID->191798210,ExpressionUUID->"e6f30854-5747-4b47-a25f-57fe271fb76e"],
+
+Cell[TextData[{
+ "The wrappers are included automatically and do not need to be used in \
+describing the branching edges ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["b", "TI"], 
+   StyleBox["j", "TI"]]], "InlineFormula",ExpressionUUID->
+  "1a5070c2-7664-4d3c-b355-4faec90ace77"],
+ "."
+}], "Notes",
+ CellID->17094574,ExpressionUUID->"80499cee-ba71-4a91-85a0-249169e69700"],
+
+Cell[TextData[{
+ "To indicate left versus right, a branching edge ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["b", "TI"], 
+   StyleBox["j", "TI"]]], "InlineFormula",ExpressionUUID->
+  "f07a7118-9819-4bc6-bbaf-28c054501e14"],
+ " is a list of two elements. The first element indicates left and the second \
+element indicates right. The branching edge takes one of the following forms:"
+}], "Notes",
+ CellID->598514318,ExpressionUUID->"7081de3a-111c-437c-abad-ce8630f98cf5"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5e58a9f2-870e-45f4-8c6f-d45ad1215d19"], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["v", "TI"], 
+      StyleBox["1", "TR"]], " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["2", "TR"]], ",", " ", 
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["3", "TR"]]}], "}"}]}], Cell[TextData[{
+     "Vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "8ca87a8b-e3ba-4d3c-8b95-236e9d859043"],
+     " points left to vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula",ExpressionUUID->
+      "a8437c23-a829-4952-97a4-3130af486352"],
+     " and right to vertex ",
+     Cell[BoxData[
+      RowBox[{
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["3", "TR"]], "."}]], "InlineFormula",ExpressionUUID->
+      "40cfaa27-80ec-45ec-bfe7-2243b8da5d51"]
+    }], "TableText",ExpressionUUID->"9d346fe2-f9c0-4f2d-b011-988bb3eb17fb"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0740be91-8ddb-4607-a7fd-58cda188efef"], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["v", "TI"], 
+      StyleBox["1", "TR"]], " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["2", "TR"]], ",", " ", 
+       RowBox[{"g", "[", "1", "]"}]}], "}"}]}], Cell[TextData[{
+     "Vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "2dc6633e-c734-4b62-96ff-df349c58eada"],
+     " points left to vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula",ExpressionUUID->
+      "f0167c10-93e6-40f3-9fca-f2d94db647ca"],
+     " and right to the root of hyperspherical tree graph g[1]."
+    }], "TableText",ExpressionUUID->"3eb61a2c-54ad-43ba-b4c6-9a5b6363265d"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "0d4a872c-b11b-460d-9159-920eb9a14259"], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["v", "TI"], 
+      StyleBox["1", "TR"]], " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"g", "[", "1", "]"}], ",", " ", 
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["2", "TR"]]}], "}"}]}], Cell[TextData[{
+     "Vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "b65b9262-b157-4740-b398-5527f67bca8b"],
+     " points left to the root of hyperspherical tree graph g[1] and right to \
+vertex ",
+     Cell[BoxData[
+      RowBox[{
+       SubscriptBox[
+        StyleBox["v", "TI"], 
+        StyleBox["2", "TR"]], "."}]], "InlineFormula",ExpressionUUID->
+      "945d8f7a-40d1-4cf7-b775-734c001cfdc9"]
+    }], "TableText",ExpressionUUID->"603b5011-77a5-4811-b15c-c6d8f9f4e742"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "5eaff471-8760-452b-82a8-4b0acbf40f8e"], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["v", "TI"], 
+      StyleBox["1", "TR"]], " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"g", "[", "1", "]"}], ",", " ", 
+       RowBox[{"g", "[", "2", "]"}]}], "}"}]}], Cell[TextData[{
+     "Vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "d7667a3e-f12c-4adb-8675-d4bd43dc0164"],
+     " points left to the root of hyperspherical tree graph g[1] and right to \
+to the root of hyperspherical tree graph g[2]."
+    }], "TableText",ExpressionUUID->"b5642665-db2e-45d7-9bcd-c9ba490e595f"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "e2be7cc0-1190-4fe0-ae3a-bd5bb94e27f0"], 
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"1", ",", 
+       StyleBox["n", "TI"]}], "]"}], " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", " ", "_"}], "}"}]}], Cell[TextData[{
+     "The ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula",ExpressionUUID->
+      "3fccbc93-b929-4615-804b-842bc0f3fbd0"],
+     "th leaf of hyperspherical tree graph g[1] branches like in the above \
+examples."
+    }], "TableText",ExpressionUUID->"b30ee534-85a0-4f21-8ff2-8cacd24615cb"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True, True, True}}}},
+ CellID->241853190,ExpressionUUID->"35c5578f-6713-4137-b2e0-700f967f81ae"],
+
+Cell[TextData[{
+ "A branching edge ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["b", "TI"], 
+   StyleBox["j", "TI"]]], "InlineFormula",ExpressionUUID->
+  "af1f51a1-91e0-40f1-95a3-0f489674e229"],
+ " can also take one of the following special forms:"
+}], "Notes",
+ CellID->384598807,ExpressionUUID->"7f54585d-caa4-49b7-b739-4790d61c9932"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "30bbc56a-6c62-4ded-96e8-7c166b5f2c40"], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["v", "TI"], 
+      StyleBox["1", "TR"]], " ", "\[Rule]", " ", 
+     RowBox[{"g", "[", "1", "]"}]}], Cell[TextData[{
+     "Vertex ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "8a5adabe-643e-42cf-9b38-e01b36783085"],
+     " is replaced by the hyperspherical tree graph of the form g[1], where \
+the root of g[1] is in place of ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["v", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",ExpressionUUID->
+      "225dcbc5-618b-4c97-acf6-0a04789d6c64"],
+     ". "
+    }], "TableText",ExpressionUUID->"52f345db-40d8-4214-a6f8-0911d15d53c0"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "4184460c-bfa5-4ba5-bfcc-b8c05c1b6556"], 
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"1", ",", 
+       StyleBox["n", "TI"]}], "]"}], " ", "\[Rule]", " ", 
+     RowBox[{"g", "[", "2", "]"}]}], Cell[TextData[{
+     "The ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula",ExpressionUUID->
+      "f3b5caaf-aa79-46b2-94c6-ef1580fd32a7"],
+     "th leaf of hyperspherical tree graph g[1] becomes the root of a \
+hyperspherical tree graph of the form g[2]."
+    }], "TableText",ExpressionUUID->"b8cd202a-c02b-4a9b-b558-3ea1d15edbb1"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "afd0d6c4-ff6c-4dcb-9a3f-1ae561a0ffca"], 
+    RowBox[{
+     RowBox[{"g", "[", "1", "]"}], " ", "\[Rule]", " ", 
+     RowBox[{"g", "[", "2", "]"}]}], Cell["\<\
+All leaves of hyperspherical tree graph g[1] becomes the root of a \
+hyperspherical tree graph of the form g[2].\
+\>", "TableText",ExpressionUUID->"84003ffd-4cc9-4e25-ac4b-89f24421fef2"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True}}}},
+ CellID->62690934,ExpressionUUID->"c4fae45e-35bd-44ad-83cf-f82618fed1f7"],
+
+Cell[TextData[{
+ "If a graph is used anywhere in a branching edge ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["b", "TI"], 
+   StyleBox["j", "TI"]]], "InlineFormula",ExpressionUUID->
+  "430f0af7-6a70-4590-bc23-03da2afa6f81"],
+ ", then it must be followed by square brackets and a sequence of arguments \
+to uniquely label it. If it appears on the right-hand-side, then it contains \
+only one argument which acts as a unique label. If it appears on the \
+left-hand-side, then it contains two arguments; the first acts as a unique \
+label and the second is an integer indicating a leaf index."
+}], "Notes",
+ CellID->377161115,ExpressionUUID->"ec08be44-170c-4b8a-ba64-19e9bbf85e70"],
+
+Cell["\<\
+The leaves of hyperspherical tree graphs are indexed starting at 1 from left \
+to right.\
+\>", "Notes",
+ CellID->433269122,ExpressionUUID->"0c637cc2-fd73-492a-8807-088bdd96cd11"],
+
+Cell[TextData[{
+ "The option ",
+ ButtonBox["VertexCoordinates",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/VertexCoordinates"],
+ " is used to mimic a traditional hyperspherical tree graph layout. The root \
+is placed at the bottom and the leaves at the top. The leaves are equally \
+spaced horizontally and placed at the same height vertically."
+}], "Notes",
+ CellID->397806360,ExpressionUUID->"5186dfe1-48af-468e-a093-373c84089d08"],
+
+Cell["\<\
+The graph layout does not define the tree as the information is encoded using \
+the inert vertex wrappers.\
+\>", "Notes",
+ CellID->56269575,ExpressionUUID->"d41db415-4331-4edf-b710-5c93f80b821c"],
+
+Cell[TextData[{
+ "The rules for ",
+ ButtonBox["VertexLabels",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/VertexLabels"],
+ " also include two additions:"
+}], "Notes",
+ CellID->228269390,ExpressionUUID->"36d197e7-b504-4893-b0aa-bc9a7ca64032"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "77d3d3c8-2acd-489a-b2fc-45e20995c543"], "\"\<Angles\>\"", Cell["\<\
+Displays the standard angular coordinate near the corresponding vertex. The \
+index of the coordinate is within a tooltip.\
+\>", "TableText",ExpressionUUID->"55c294ad-385d-4d16-8e3c-f897f87e7592"]},
+   {Cell["      ", "TableRowIcon",ExpressionUUID->
+     "c4f64e5c-6f5b-4ae4-95f6-bd1cbffdef79"], "\"\<Ordering\>\"", Cell["\<\
+Displays the index of the angular coordinate near the corresponding vertex.\
+\>", "TableText",ExpressionUUID->"580dad78-5300-496a-a578-b8a3e22254e3"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->61722238,ExpressionUUID->"e0efd5a2-7559-4247-ba66-338b5acd352b"],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"35d267ea-473e-4e3c-8a01-8b2823b13721"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"5274f56c-7df5-4d10-86d8-6c63c41cd0fa"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(9)", "ExampleCount",ExpressionUUID->
+  "2fc58697-cfc0-4dd5-877d-569439a18db2"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->732276279,ExpressionUUID->"9e974098-2292-4c16-a969-a33a278d84a4"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "48242e11-9744-46d2-b496-cc567ecc2968"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->103231230,ExpressionUUID->"191d005f-db1e-427f-992b-6d3517685ffe"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->27630762,ExpressionUUID->"182076ee-962a-444e-8cba-e90679e27951"],
+
+Cell["Create a canonical hyperspherical tree graph with 5 leaves.", \
+"ExampleText",
+ CellID->286144138,ExpressionUUID->"8ef0e9f6-1d36-4d03-8624-3a2812ce19f9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HypersphericalTreeGraph", "[", "5", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->45310659,ExpressionUUID->"60153cd8-d253-4cad-936e-b3300248b2ab"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2], 
+       Hyperspherical`iR[9], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iR[8], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[7], 
+       Hyperspherical`iL[5], 
+       Hyperspherical`iR[6]}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {4, 6}, {4, 
+       7}, {6, 8}, {6, 9}}, Null}, {VertexCoordinates -> {{3, -2}, {
+          Rational[5, 2], 
+          Rational[-3, 2]}, {5, 0}, {2, -1}, {4, 0}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{3., -2.}, {2.5, -1.5}, {5., 0.}, {2., -1.}, {4., 
+       0.}, {1.5, -0.5}, {3., 0.}, {1., 0.}, {2., 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {4, 6}, {4, 7}, {6, 8}, {6,
+           9}}, 0.03700564971751412]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.03700564971751412], DiskBox[2, 0.03700564971751412], 
+         DiskBox[3, 0.03700564971751412], DiskBox[4, 0.03700564971751412], 
+         DiskBox[5, 0.03700564971751412], DiskBox[6, 0.03700564971751412], 
+         DiskBox[7, 0.03700564971751412], DiskBox[8, 0.03700564971751412], 
+         DiskBox[9, 0.03700564971751412]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 190},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->171415795,ExpressionUUID->"f25c5bb8-d759-4f39-87d3-1e3725a74b91"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "98af178c-0321-4fbb-9dca-4bbeda55e172"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->88940421,ExpressionUUID->"749ea4a7-8b43-46e3-81a5-13a20e4cf3f9"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->77991735,ExpressionUUID->"4f48e88a-bc88-4cf0-88d7-e1854f510c8c"],
+
+Cell["\<\
+Create a non-canonical hyperspherical tree graph using branching edges.\
+\>", "ExampleText",
+ CellID->634793025,ExpressionUUID->"3c8712e8-d476-4782-8c97-97f6f3350bc9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HypersphericalTreeGraph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3"}], "}"}]}], ",", 
+    RowBox[{"3", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5"}], "}"}]}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->103227495,ExpressionUUID->"d2da8242-92f7-489f-9418-82b524e6c38e"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iR[2], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[5]}, {{{1, 2}, {1, 3}, {3, 4}, {3, 5}}, Null}, {
+      VertexCoordinates -> {{2, -1}, {1, 0}, {
+          Rational[5, 2], 
+          Rational[-1, 2]}, {2, 0}, {3, 0}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{2., -1.}, {1., 0.}, {2.5, -0.5}, {2., 0.}, {3., 
+       0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {3, 4}, {3, 5}}, 0.02261146496815286]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.02261146496815286], DiskBox[2, 0.02261146496815286], 
+         DiskBox[3, 0.02261146496815286], DiskBox[4, 0.02261146496815286], 
+         DiskBox[5, 0.02261146496815286]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 191},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->199933771,ExpressionUUID->"3e4be7c5-826f-45e1-8cec-b0939d65e278"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "248e947a-7948-4af7-a4f7-ced8f60ed24e"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->193204851,ExpressionUUID->"4e999a20-8438-4b85-8ca4-1de89aa5d70e"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->201452989,ExpressionUUID->"8418ffbc-7b85-4e86-bc00-6a2e0120805c"],
+
+Cell["\<\
+Create a non-canonical hyperspherical tree graph using existing \
+hyperspherical tree graphs.\
+\>", "ExampleText",
+ CellID->42242854,ExpressionUUID->"bf073911-7bc0-48e5-a13f-36b910c59426"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"HypersphericalTreeGraph", "[", "3", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"HypersphericalTreeGraph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"g", "[", "1", "]"}], ",", 
+       RowBox[{"g", "[", "2", "]"}]}], "}"}]}], ",", 
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"2", ",", "2"}], "]"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3"}], "}"}]}]}], "}"}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->867382428,ExpressionUUID->"46601739-46cd-4a1f-9ad8-ed8aabacdf84"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2], 
+       Hyperspherical`iR[4], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iR[9], 
+       Hyperspherical`iL[7], 
+       Hyperspherical`iR[8], 
+       Hyperspherical`iL[5], 
+       Hyperspherical`iR[13], 
+       Hyperspherical`iL[10], 
+       Hyperspherical`iR[6], 
+       Hyperspherical`iL[11], 
+       Hyperspherical`iR[12]}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {4, 6}, {4, 
+       7}, {3, 8}, {3, 9}, {8, 10}, {8, 11}, {11, 12}, {11, 13}}, Null}, {
+      VertexCoordinates -> {{4, -3}, {2, -1}, {
+          Rational[11, 2], 
+          Rational[-3, 2]}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}, {5, -1}, {7, 0}, {4, 0}, {
+          Rational[11, 2], 
+          Rational[-1, 2]}, {5, 0}, {6, 0}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{4., -3.}, {2., -1.}, {5.5, -1.5}, {1.5, -0.5}, {3.,
+        0.}, {1., 0.}, {2., 0.}, {5., -1.}, {7., 0.}, {4., 0.}, {5.5, -0.5}, {
+       5., 0.}, {6., 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {3, 8}, {3, 9}, {4, 6}, {4,
+           7}, {8, 10}, {8, 11}, {11, 12}, {11, 13}}, 0.04847715736040609]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.04847715736040609], DiskBox[2, 0.04847715736040609], 
+         DiskBox[3, 0.04847715736040609], DiskBox[4, 0.04847715736040609], 
+         DiskBox[5, 0.04847715736040609], DiskBox[6, 0.04847715736040609], 
+         DiskBox[7, 0.04847715736040609], DiskBox[8, 0.04847715736040609], 
+         DiskBox[9, 0.04847715736040609], DiskBox[10, 0.04847715736040609], 
+         DiskBox[11, 0.04847715736040609], DiskBox[12, 0.04847715736040609], 
+         DiskBox[13, 0.04847715736040609]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 190},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->121941248,ExpressionUUID->"e9d447b9-d441-45d4-a6cf-4a2412da8d77"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "539b8d19-0a34-4e09-b127-03880cf6a7dc"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1293636265,ExpressionUUID->"736aa626-7bff-41c9-89ec-373eed5a59ab"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->9335487,ExpressionUUID->"99e36e76-e617-40d8-a719-0bd2545c2abe"],
+
+Cell[TextData[{
+ "A ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HypersphericalTreeGraph"]],
+    "paclet:Hyperspherical/ref/HypersphericalTreeGraph"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "3df6c2dc-cd82-4b4f-bc61-14d3445c0b59"],
+ " can be used as input for ",
+ ButtonBox["CoordinateChartData",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/CoordinateChartData"],
+ ". Using the canonical tree we get back the standard coordinates for the \
+sphere."
+}], "ExampleText",
+ CellID->72431830,ExpressionUUID->"cb3dc8a1-1bc1-4dd7-bad8-0e0b9c50b51e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"HypersphericalTreeGraph", "[", "3", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"CoordinateChartData", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\"\<Hyperspherical\>\"", ",", "\"\<Euclidean\>\"", ",", "g"}], 
+    "}"}], ","}]}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->63769814,ExpressionUUID->"c35fe469-4fd0-454a-90bc-f630088b1c85"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "f2c7cffd-644c-4096-b4c6-6d45b26a87c3"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->2061341341,ExpressionUUID->"4c281054-7d22-40ae-9e71-fe255842b3a4"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "VertexLabels",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount",ExpressionUUID->
+  "d208694c-ea25-44e0-b750-354cd02440cb"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->1757724783,ExpressionUUID->"a10748f8-d267-4963-8af2-765aaf445475"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->448344550,ExpressionUUID->"0ba2a817-560f-4bdc-847c-6bca2f587d71"],
+
+Cell[TextData[{
+ "Automatic vertex labels reveal the inert wrappers ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["iL"]],"paclet:Hyperspherical/ref/iL"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "9eca52be-15f5-41ce-a8ff-48231fd3c6e7"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["iR"]],"paclet:Hyperspherical/ref/iR"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "935483c6-d029-4919-a5e6-4c5b5cfee04d"],
+ ", and ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["iRoot"]],"paclet:Hyperspherical/ref/iRoot"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "edcd9141-9069-4658-a87d-6cbc6c2546e7"],
+ " at every vertex."
+}], "ExampleText",
+ CellID->70820846,ExpressionUUID->"8a1293b8-58c0-4a76-aa00-1ce91d076071"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HypersphericalTreeGraph", "[", 
+  RowBox[{"4", ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->24500685,ExpressionUUID->"ea10c144-010b-42ae-b714-857e19d016bb"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2], 
+       Hyperspherical`iR[7], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iR[6], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[5]}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {4, 6}, {4, 
+       7}}, Null}, {GraphLayout -> {"Dimension" -> 2}, VertexCoordinates -> {{
+          Rational[5, 2], 
+          Rational[-3, 2]}, {2, -1}, {4, 0}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}}, 
+       VertexLabels -> {Automatic}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+        ArrowBox[{{{2.5, -1.5}, {2., -1.}}, {{2.5, -1.5}, {4., 0.}}, {{
+         2., -1.}, {1.5, -0.5}}, {{2., -1.}, {3., 0.}}, {{1.5, -0.5}, {1., 
+         0.}}, {{1.5, -0.5}, {2., 0.}}}, 0.030239520958083826`]}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{2.5, -1.5}, 0.030239520958083826], InsetBox[
+          RowBox[{"iRoot", "(", "1", ")"}], 
+          Offset[{2, 2}, {2.5302395209580837, -1.469760479041916}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{2., -1.}, 0.030239520958083826], 
+         InsetBox[
+          RowBox[{"iL", "(", "2", ")"}], 
+          Offset[{2, 2}, {2.0302395209580837, -0.9697604790419162}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{4., 0.}, 0.030239520958083826], 
+         InsetBox[
+          RowBox[{"iR", "(", "7", ")"}], 
+          Offset[{2, 2}, {4.030239520958084, 0.030239520958083826}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{1.5, -0.5}, 0.030239520958083826], InsetBox[
+          RowBox[{"iL", "(", "3", ")"}], 
+          Offset[{2, 2}, {1.530239520958084, -0.4697604790419162}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{3., 0.}, 0.030239520958083826], 
+         InsetBox[
+          RowBox[{"iR", "(", "6", ")"}], 
+          Offset[{2, 2}, {3.0302395209580837, 0.030239520958083826}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{1., 0.}, 0.030239520958083826], 
+         InsetBox[
+          RowBox[{"iL", "(", "4", ")"}], 
+          Offset[{2, 2}, {1.030239520958084, 0.030239520958083826}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{2., 0.}, 0.030239520958083826], 
+         InsetBox[
+          RowBox[{"iR", "(", "5", ")"}], 
+          Offset[{2, 2}, {2.0302395209580837, 0.030239520958083826}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 190},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->125927484,ExpressionUUID->"ac75ff76-d2a6-412d-9246-52c1546c0908"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "71a1f63b-e521-4814-bc1a-391f85d6faaf"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->466651059,ExpressionUUID->"627db35e-a223-4a98-a619-7545a012dfad"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->57376983,ExpressionUUID->"02d6c113-29b1-4092-86fe-189af763fa82"],
+
+Cell["\<\
+Use \"Angles\" to show the standard angular coordinates at each branching \
+vertex.\
+\>", "ExampleText",
+ CellID->134429725,ExpressionUUID->"8c3ae90a-d39c-41b5-b446-0441771591f1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HypersphericalTreeGraph", "[", 
+  RowBox[{"4", ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "\"\<Angles\>\""}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->936984449,ExpressionUUID->"125db01e-a19f-4483-8f17-4b325f32a088"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2], 
+       Hyperspherical`iR[7], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iR[6], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[5]}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {4, 6}, {4, 
+       7}}, Null}, {GraphLayout -> {"Dimension" -> 2}, VertexCoordinates -> {{
+          Rational[5, 2], 
+          Rational[-3, 2]}, {2, -1}, {4, 0}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}}, 
+       VertexLabels -> {Hyperspherical`iRoot[1] -> Tooltip[
+           Subscript[$CellContext`\[Theta], 1], 1], Hyperspherical`iL[2] -> 
+         Tooltip[
+           Subscript[$CellContext`\[Theta], 2], 2], Hyperspherical`iL[3] -> 
+         Tooltip[
+           Subscript[$CellContext`\[CurlyPhi], 1], 3]}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+        ArrowBox[{{{2.5, -1.5}, {2., -1.}}, {{2.5, -1.5}, {4., 0.}}, {{
+         2., -1.}, {1.5, -0.5}}, {{2., -1.}, {3., 0.}}, {{1.5, -0.5}, {1., 
+         0.}}, {{1.5, -0.5}, {2., 0.}}}, 0.030239520958083826`]}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{2.5, -1.5}, 0.030239520958083826], InsetBox[
+          TagBox[
+           TooltipBox[
+            SubscriptBox["\[Theta]", "1"],
+            "1"],
+           Annotation[#, 1, "Tooltip"]& ], 
+          Offset[{2, 2}, {2.5302395209580837, -1.469760479041916}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{2., -1.}, 0.030239520958083826], 
+         InsetBox[
+          TagBox[
+           TooltipBox[
+            SubscriptBox["\[Theta]", "2"],
+            "2"],
+           Annotation[#, 2, "Tooltip"]& ], 
+          Offset[{2, 2}, {2.0302395209580837, -0.9697604790419162}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, 
+        DiskBox[{4., 0.}, 0.030239520958083826], {
+         DiskBox[{1.5, -0.5}, 0.030239520958083826], InsetBox[
+          TagBox[
+           TooltipBox[
+            SubscriptBox["\[CurlyPhi]", "1"],
+            "3"],
+           Annotation[#, 3, "Tooltip"]& ], 
+          Offset[{2, 2}, {1.530239520958084, -0.4697604790419162}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, DiskBox[{3., 0.}, 0.030239520958083826], 
+        DiskBox[{1., 0.}, 0.030239520958083826], 
+        DiskBox[{2., 0.}, 0.030239520958083826]}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 191},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->149545834,ExpressionUUID->"0da1b1a9-e3bd-4c4d-ad54-0328fcf7b889"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "34c696c9-5dab-4e95-b27c-5759ba43cf6b"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->441446942,ExpressionUUID->"3dbbe176-1842-4e79-bd1d-ac36c3e40174"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->311439080,ExpressionUUID->"7b602f03-05f2-4977-930e-cba08e5682c0"],
+
+Cell["\<\
+Use \"Ordering\" to show the indexed ordering of the branching vertices.\
+\>", "ExampleText",
+ CellID->235520864,ExpressionUUID->"44234e64-cd7b-419d-a282-81b1b317b6ce"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"HypersphericalTreeGraph", "[", "3", "]"}]}], ";", 
+  RowBox[{"HypersphericalTreeGraph", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"g", "[", "A", "]"}], "\[Rule]", 
+      RowBox[{"g", "[", "A", "]"}]}], "}"}], ",", 
+    RowBox[{"VertexLabels", "\[Rule]", "\"\<Ordering\>\""}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->38351132,ExpressionUUID->"b6e4f737-042a-4b9f-b3a2-62644a4266b0"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iL[3], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[11], 
+       Hyperspherical`iL[9], 
+       Hyperspherical`iR[10], 
+       Hyperspherical`iR[5], 
+       Hyperspherical`iL[6], 
+       Hyperspherical`iR[14], 
+       Hyperspherical`iL[12], 
+       Hyperspherical`iR[13], 
+       Hyperspherical`iR[7], 
+       Hyperspherical`iL[8], 
+       Hyperspherical`iR[17], 
+       Hyperspherical`iL[15], 
+       Hyperspherical`iR[16], 
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2]}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {6, 7}, {6, 
+       8}, {7, 9}, {7, 10}, {11, 12}, {11, 13}, {12, 14}, {12, 15}, {16, 
+       17}, {16, 11}, {17, 1}, {17, 6}}, Null}, {
+      GraphLayout -> {"Dimension" -> 2}, VertexCoordinates -> {{2, -1}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}, {5, -1}, {
+          Rational[9, 2], 
+          Rational[-1, 2]}, {6, 0}, {4, 0}, {5, 0}, {8, -1}, {
+          Rational[15, 2], 
+          Rational[-1, 2]}, {9, 0}, {7, 0}, {8, 0}, {5, -4}, {
+          Rational[7, 2], 
+          Rational[-5, 2]}}, 
+       VertexLabels -> {
+        Hyperspherical`iL[8] -> 8, Hyperspherical`iRoot[1] -> 1, 
+         Hyperspherical`iR[5] -> 5, Hyperspherical`iL[2] -> 2, 
+         Hyperspherical`iL[4] -> 4, Hyperspherical`iR[7] -> 7, 
+         Hyperspherical`iL[3] -> 3, Hyperspherical`iL[6] -> 6}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+        ArrowBox[CompressedData["
+1:eJxTTMoPSmVmYGAQAGImKIYCBwj1YT+E/mEPoR/sxy7P4cCAAtDVf7DHLw8z
+DwZE0MwXckBVjy4vgaYfXb0AAXkRNHkFNPPl0NSjyyuh6UdXL0NAXgFNHuYe
+gQPY7UOX54HyWXDw0eMLXR4RngCJYTFZ
+         "], 0.05783410138248847]}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {DiskBox[{2., -1.}, 0.05783410138248847], 
+         InsetBox["3", 
+          Offset[{2, 2}, {2.0578341013824883, -0.9421658986175115}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{1.5, -0.5}, 0.05783410138248847],
+          InsetBox["4", 
+          Offset[{2, 2}, {1.5578341013824886, -0.44216589861751154}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, DiskBox[{3., 0.}, 0.05783410138248847], 
+        DiskBox[{1., 0.}, 0.05783410138248847], 
+        DiskBox[{2., 0.}, 0.05783410138248847], {
+         DiskBox[{5., -1.}, 0.05783410138248847], 
+         InsetBox["5", 
+          Offset[{2, 2}, {5.057834101382489, -0.9421658986175115}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{4.5, -0.5}, 0.05783410138248847],
+          InsetBox["6", 
+          Offset[{2, 2}, {4.557834101382489, -0.44216589861751154}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, DiskBox[{6., 0.}, 0.05783410138248847], 
+        DiskBox[{4., 0.}, 0.05783410138248847], 
+        DiskBox[{5., 0.}, 0.05783410138248847], {
+         DiskBox[{8., -1.}, 0.05783410138248847], 
+         InsetBox["7", 
+          Offset[{2, 2}, {8.057834101382488, -0.9421658986175115}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{7.5, -0.5}, 0.05783410138248847],
+          InsetBox["8", 
+          Offset[{2, 2}, {7.557834101382489, -0.44216589861751154}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, DiskBox[{9., 0.}, 0.05783410138248847], 
+        DiskBox[{7., 0.}, 0.05783410138248847], 
+        DiskBox[{8., 0.}, 0.05783410138248847], {
+         DiskBox[{5., -4.}, 0.05783410138248847], 
+         InsetBox["1", 
+          Offset[{2, 2}, {5.057834101382489, -3.9421658986175117}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {DiskBox[{3.5, -2.5}, 0.05783410138248847],
+          InsetBox["2", 
+          Offset[{2, 2}, {3.5578341013824883, -2.4421658986175117}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 190},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->241046179,ExpressionUUID->"9bf88651-8b14-4323-abef-4e939af661e2"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "7f435349-7d97-4987-a67f-d3500ed415a6"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->2123667759,ExpressionUUID->"a3594e46-3885-43dc-ba20-84da7e58f50a"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->208635644,ExpressionUUID->"dab02c5c-ff62-4ae5-9106-ea78a4a4aa61"],
+
+Cell["\<\
+A hyperspherical tree graph is a special case of a directed binary tree graph.\
+\>", "ExampleText",
+ CellID->31065053,ExpressionUUID->"aa95a40e-ca72-4e21-b40f-3722bcb7aa8f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"HypersphericalTreeGraph", "[", "4", "]"}]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->98987439,ExpressionUUID->"609c2430-0d6c-4028-a35d-1b45ded96031"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->7294501,ExpressionUUID->"1737e0fb-2790-416e-8e49-eddb3f9e2074"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->57543936,ExpressionUUID->"96cc8094-be81-445f-9e57-08609a13a6dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectedGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->188510204,ExpressionUUID->"2a2c1fc8-e564-469a-8f75-d23531021f5f"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->28447971,ExpressionUUID->"39e24e64-8336-4cec-9343-0fe0a3d78de5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->10358928,ExpressionUUID->"e693d178-295f-42fd-a0ed-e15d94c3e21d"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->74440102,ExpressionUUID->"3c6d581e-18ef-4481-bdc4-a2c6f261d0fe"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Neat Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "1150dcf8-0511-432c-a3b6-a6f236fecee9"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->589267740,ExpressionUUID->"4ecb569b-3c31-4cdf-abcd-1e9831093387"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->38771262,ExpressionUUID->"174851aa-fa5e-4adc-95ce-31962bbde002"],
+
+Cell["\<\
+Using a graph to replace its own leaves leads to a fractal-like tree.\
+\>", "ExampleText",
+ CellID->13091054,ExpressionUUID->"0e19b23a-559d-446d-9f6e-a592e2fe7170"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"HypersphericalTreeGraph", "[", "3", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Nest", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"HypersphericalTreeGraph", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"#", "[", "1", "]"}], "\[Rule]", 
+       RowBox[{"g", "[", "2", "]"}]}], "}"}], "]"}], "&"}], ",", "g", ",", 
+   "3"}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->131260120,ExpressionUUID->"92b67565-4550-4642-b499-88e456e78666"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+       Hyperspherical`iL[7], 
+       Hyperspherical`iL[8], 
+       Hyperspherical`iR[83], 
+       Hyperspherical`iL[81], 
+       Hyperspherical`iR[82], 
+       Hyperspherical`iR[9], 
+       Hyperspherical`iL[10], 
+       Hyperspherical`iR[86], 
+       Hyperspherical`iL[84], 
+       Hyperspherical`iR[85], 
+       Hyperspherical`iR[11], 
+       Hyperspherical`iL[12], 
+       Hyperspherical`iR[89], 
+       Hyperspherical`iL[87], 
+       Hyperspherical`iR[88], 
+       Hyperspherical`iL[15], 
+       Hyperspherical`iL[16], 
+       Hyperspherical`iR[92], 
+       Hyperspherical`iL[90], 
+       Hyperspherical`iR[91], 
+       Hyperspherical`iR[17], 
+       Hyperspherical`iL[18], 
+       Hyperspherical`iR[95], 
+       Hyperspherical`iL[93], 
+       Hyperspherical`iR[94], 
+       Hyperspherical`iR[19], 
+       Hyperspherical`iL[20], 
+       Hyperspherical`iR[98], 
+       Hyperspherical`iL[96], 
+       Hyperspherical`iR[97], 
+       Hyperspherical`iL[23], 
+       Hyperspherical`iL[24], 
+       Hyperspherical`iR[101], 
+       Hyperspherical`iL[99], 
+       Hyperspherical`iR[100], 
+       Hyperspherical`iR[25], 
+       Hyperspherical`iL[26], 
+       Hyperspherical`iR[104], 
+       Hyperspherical`iL[102], 
+       Hyperspherical`iR[103], 
+       Hyperspherical`iR[27], 
+       Hyperspherical`iL[28], 
+       Hyperspherical`iR[107], 
+       Hyperspherical`iL[105], 
+       Hyperspherical`iR[106], 
+       Hyperspherical`iL[33], 
+       Hyperspherical`iL[34], 
+       Hyperspherical`iR[110], 
+       Hyperspherical`iL[108], 
+       Hyperspherical`iR[109], 
+       Hyperspherical`iR[35], 
+       Hyperspherical`iL[36], 
+       Hyperspherical`iR[113], 
+       Hyperspherical`iL[111], 
+       Hyperspherical`iR[112], 
+       Hyperspherical`iR[37], 
+       Hyperspherical`iL[38], 
+       Hyperspherical`iR[116], 
+       Hyperspherical`iL[114], 
+       Hyperspherical`iR[115], 
+       Hyperspherical`iL[41], 
+       Hyperspherical`iL[42], 
+       Hyperspherical`iR[119], 
+       Hyperspherical`iL[117], 
+       Hyperspherical`iR[118], 
+       Hyperspherical`iR[43], 
+       Hyperspherical`iL[44], 
+       Hyperspherical`iR[122], 
+       Hyperspherical`iL[120], 
+       Hyperspherical`iR[121], 
+       Hyperspherical`iR[45], 
+       Hyperspherical`iL[46], 
+       Hyperspherical`iR[125], 
+       Hyperspherical`iL[123], 
+       Hyperspherical`iR[124], 
+       Hyperspherical`iL[49], 
+       Hyperspherical`iL[50], 
+       Hyperspherical`iR[128], 
+       Hyperspherical`iL[126], 
+       Hyperspherical`iR[127], 
+       Hyperspherical`iR[51], 
+       Hyperspherical`iL[52], 
+       Hyperspherical`iR[131], 
+       Hyperspherical`iL[129], 
+       Hyperspherical`iR[130], 
+       Hyperspherical`iR[53], 
+       Hyperspherical`iL[54], 
+       Hyperspherical`iR[134], 
+       Hyperspherical`iL[132], 
+       Hyperspherical`iR[133], 
+       Hyperspherical`iL[59], 
+       Hyperspherical`iL[60], 
+       Hyperspherical`iR[137], 
+       Hyperspherical`iL[135], 
+       Hyperspherical`iR[136], 
+       Hyperspherical`iR[61], 
+       Hyperspherical`iL[62], 
+       Hyperspherical`iR[140], 
+       Hyperspherical`iL[138], 
+       Hyperspherical`iR[139], 
+       Hyperspherical`iR[63], 
+       Hyperspherical`iL[64], 
+       Hyperspherical`iR[143], 
+       Hyperspherical`iL[141], 
+       Hyperspherical`iR[142], 
+       Hyperspherical`iL[67], 
+       Hyperspherical`iL[68], 
+       Hyperspherical`iR[146], 
+       Hyperspherical`iL[144], 
+       Hyperspherical`iR[145], 
+       Hyperspherical`iR[69], 
+       Hyperspherical`iL[70], 
+       Hyperspherical`iR[149], 
+       Hyperspherical`iL[147], 
+       Hyperspherical`iR[148], 
+       Hyperspherical`iR[71], 
+       Hyperspherical`iL[72], 
+       Hyperspherical`iR[152], 
+       Hyperspherical`iL[150], 
+       Hyperspherical`iR[151], 
+       Hyperspherical`iL[75], 
+       Hyperspherical`iL[76], 
+       Hyperspherical`iR[155], 
+       Hyperspherical`iL[153], 
+       Hyperspherical`iR[154], 
+       Hyperspherical`iR[77], 
+       Hyperspherical`iL[78], 
+       Hyperspherical`iR[158], 
+       Hyperspherical`iL[156], 
+       Hyperspherical`iR[157], 
+       Hyperspherical`iR[79], 
+       Hyperspherical`iL[80], 
+       Hyperspherical`iR[161], 
+       Hyperspherical`iL[159], 
+       Hyperspherical`iR[160], 
+       Hyperspherical`iL[5], 
+       Hyperspherical`iL[6], 
+       Hyperspherical`iR[13], 
+       Hyperspherical`iL[14], 
+       Hyperspherical`iR[21], 
+       Hyperspherical`iL[22], 
+       Hyperspherical`iL[31], 
+       Hyperspherical`iL[32], 
+       Hyperspherical`iR[39], 
+       Hyperspherical`iL[40], 
+       Hyperspherical`iR[47], 
+       Hyperspherical`iL[48], 
+       Hyperspherical`iL[57], 
+       Hyperspherical`iL[58], 
+       Hyperspherical`iR[65], 
+       Hyperspherical`iL[66], 
+       Hyperspherical`iR[73], 
+       Hyperspherical`iL[74], 
+       Hyperspherical`iL[3], 
+       Hyperspherical`iL[4], 
+       Hyperspherical`iR[29], 
+       Hyperspherical`iL[30], 
+       Hyperspherical`iR[55], 
+       Hyperspherical`iL[56], 
+       Hyperspherical`iRoot[1], 
+       Hyperspherical`iL[2]}, {CompressedData["
+1:eJwBUQGu/iFib1JiAgAAAKAAAAACAAAAAQIBAwIEAgUGBwYIBwkHCgsMCw0M
+DgwPEBEQEhETERQVFhUXFhgWGRobGhwbHRseHyAfISAiICMkJSQmJSclKCkq
+KSsqLCotLi8uMC8xLzIzNDM1NDY0Nzg5ODo5Ozk8PT49Pz5APkFCQ0JEQ0VD
+RkdIR0lISkhLTE1MTk1PTVBRUlFTUlRSVVZXVlhXWVdaW1xbXVxeXF9gYWBi
+YWNhZGVmZWdmaGZpamtqbGtta25vcG9xcHJwc3R1dHZ1d3V4eXp5e3p8en1+
+f36Af4F/goOEg4WEhoSHiImIC4kBiQaKi4oaixCLFYyNjCmNH40kjo+OOI8u
+jzOQkZBHkT2RQpKTklaTTJNRlJWUZZVblWCWl5Z0l2qXb5iZmIOZeZl+mpua
+jJuIm4qcnZySnY6dkJ6fnpiflJ+WoKGgnqGaoZzMF27U
+       "], Null}, {VertexCoordinates -> {{2, -1}, {
+          Rational[3, 2], 
+          Rational[-1, 2]}, {3, 0}, {1, 0}, {2, 0}, {5, -1}, {
+          Rational[9, 2], 
+          Rational[-1, 2]}, {6, 0}, {4, 0}, {5, 0}, {8, -1}, {
+          Rational[15, 2], 
+          Rational[-1, 2]}, {9, 0}, {7, 0}, {8, 0}, {11, -1}, {
+          Rational[21, 2], 
+          Rational[-1, 2]}, {12, 0}, {10, 0}, {11, 0}, {14, -1}, {
+          Rational[27, 2], 
+          Rational[-1, 2]}, {15, 0}, {13, 0}, {14, 0}, {17, -1}, {
+          Rational[33, 2], 
+          Rational[-1, 2]}, {18, 0}, {16, 0}, {17, 0}, {20, -1}, {
+          Rational[39, 2], 
+          Rational[-1, 2]}, {21, 0}, {19, 0}, {20, 0}, {23, -1}, {
+          Rational[45, 2], 
+          Rational[-1, 2]}, {24, 0}, {22, 0}, {23, 0}, {26, -1}, {
+          Rational[51, 2], 
+          Rational[-1, 2]}, {27, 0}, {25, 0}, {26, 0}, {29, -1}, {
+          Rational[57, 2], 
+          Rational[-1, 2]}, {30, 0}, {28, 0}, {29, 0}, {32, -1}, {
+          Rational[63, 2], 
+          Rational[-1, 2]}, {33, 0}, {31, 0}, {32, 0}, {35, -1}, {
+          Rational[69, 2], 
+          Rational[-1, 2]}, {36, 0}, {34, 0}, {35, 0}, {38, -1}, {
+          Rational[75, 2], 
+          Rational[-1, 2]}, {39, 0}, {37, 0}, {38, 0}, {41, -1}, {
+          Rational[81, 2], 
+          Rational[-1, 2]}, {42, 0}, {40, 0}, {41, 0}, {44, -1}, {
+          Rational[87, 2], 
+          Rational[-1, 2]}, {45, 0}, {43, 0}, {44, 0}, {47, -1}, {
+          Rational[93, 2], 
+          Rational[-1, 2]}, {48, 0}, {46, 0}, {47, 0}, {50, -1}, {
+          Rational[99, 2], 
+          Rational[-1, 2]}, {51, 0}, {49, 0}, {50, 0}, {53, -1}, {
+          Rational[105, 2], 
+          Rational[-1, 2]}, {54, 0}, {52, 0}, {53, 0}, {56, -1}, {
+          Rational[111, 2], 
+          Rational[-1, 2]}, {57, 0}, {55, 0}, {56, 0}, {59, -1}, {
+          Rational[117, 2], 
+          Rational[-1, 2]}, {60, 0}, {58, 0}, {59, 0}, {62, -1}, {
+          Rational[123, 2], 
+          Rational[-1, 2]}, {63, 0}, {61, 0}, {62, 0}, {65, -1}, {
+          Rational[129, 2], 
+          Rational[-1, 2]}, {66, 0}, {64, 0}, {65, 0}, {68, -1}, {
+          Rational[135, 2], 
+          Rational[-1, 2]}, {69, 0}, {67, 0}, {68, 0}, {71, -1}, {
+          Rational[141, 2], 
+          Rational[-1, 2]}, {72, 0}, {70, 0}, {71, 0}, {74, -1}, {
+          Rational[147, 2], 
+          Rational[-1, 2]}, {75, 0}, {73, 0}, {74, 0}, {77, -1}, {
+          Rational[153, 2], 
+          Rational[-1, 2]}, {78, 0}, {76, 0}, {77, 0}, {80, -1}, {
+          Rational[159, 2], 
+          Rational[-1, 2]}, {81, 0}, {79, 0}, {80, 0}, {5, -4}, {
+          Rational[7, 2], 
+          Rational[-5, 2]}, {14, -4}, {
+          Rational[25, 2], 
+          Rational[-5, 2]}, {23, -4}, {
+          Rational[43, 2], 
+          Rational[-5, 2]}, {32, -4}, {
+          Rational[61, 2], 
+          Rational[-5, 2]}, {41, -4}, {
+          Rational[79, 2], 
+          Rational[-5, 2]}, {50, -4}, {
+          Rational[97, 2], 
+          Rational[-5, 2]}, {59, -4}, {
+          Rational[115, 2], 
+          Rational[-5, 2]}, {68, -4}, {
+          Rational[133, 2], 
+          Rational[-5, 2]}, {77, -4}, {
+          Rational[151, 2], 
+          Rational[-5, 2]}, {14, -13}, {
+          Rational[19, 2], 
+          Rational[-17, 2]}, {41, -13}, {
+          Rational[73, 2], 
+          Rational[-17, 2]}, {68, -13}, {
+          Rational[127, 2], 
+          Rational[-17, 2]}, {41, -40}, {
+          Rational[55, 2], 
+          Rational[-53, 2]}}}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJx1lctqU1EYhTfFQQcdFHHgQCT1UmwMpbWXmJjLzsUkbVOTpn0AERz7CvtR
+6pN4HiWPkKFDLdnrwPrgbAibj7X+L38OaXPw49fq504I4ff/19OdT9xemz/b
++29/e68z78ZgZ9N3DshfwPc8uu8l+vsV8zo1+F7D9wb9VxXzOofwvYfvA/rv
+KuZ1GvB9hO8Y/XrFvM6p+9IJfJ/QPwGfgs/hO4PvAv0z8Dm4Cd8lfJ/RvwQ3
+wW34WvB9Qb8FboO78HXg66HfAXfBEb6++1JEvw9Gngbui2LtN8T8wDmBw8h9
+hea138j7iX7mY+wn1n5fMT92TuAwwX6a134T7yf6mU+xn1j7zTA/dU7gcIX9
+NK/9rryf6Gd+jf3E2u8G89fOCRzm2E/z2m/u/UQ/81vsJ9Z+3zB/65zAYYH9
+NK/9Ft5P9COPS/fVxPItvR/Akfmd+9bwxTvvF1XzyuF7FOv5rbyfquaVq599
+38XZV8AX6Wd+776aWM/v3vsBHJk/uG8NX3zwflE1r6Pf9/1ie+9lfpa5gfwI
+edPzdIE8Iu95Xv5/ynkx8rz8e855nHlefv81P/e8/L7k/HHpefl8c75eeV5+
+/nrmt5kPsH/O49Dz8v1zXiw8L+fHmfPva2oX/wCiM+hh
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[0.004020477588046958], 
+         ArrowBox[CompressedData["
+1:eJwBUQGu/iFib1JiAgAAAKAAAAACAAAAAQIBAwIEAgUGBwYIBwkHCgsMCw0M
+DgwPEBEQEhETERQVFhUXFhgWGRobGhwbHRseHyAfISAiICMkJSQmJSclKCkq
+KSsqLCotLi8uMC8xLzIzNDM1NDY0Nzg5ODo5Ozk8PT49Pz5APkFCQ0JEQ0VD
+RkdIR0lISkhLTE1MTk1PTVBRUlFTUlRSVVZXVlhXWVdaW1xbXVxeXF9gYWBi
+YWNhZGVmZWdmaGZpamtqbGtta25vcG9xcHJwc3R1dHZ1d3V4eXp5e3p8en1+
+f36Af4F/goOEg4WEhoSHiAuIiYkBiQaKGoqLixCLFYwpjI2NH40kjjiOj48u
+jzOQR5CRkT2RQpJWkpOTTJNRlGWUlZVblWCWdJaXl2qXb5iDmJmZeZl+moya
+m5uIm4qckpydnY6dkJ6Ynp+flJ+WoJ6goaGaoZzGm27U
+          "], 0.12865528281750266`]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.12865528281750266], DiskBox[2, 0.12865528281750266], 
+         DiskBox[3, 0.12865528281750266], DiskBox[4, 0.12865528281750266], 
+         DiskBox[5, 0.12865528281750266], DiskBox[6, 0.12865528281750266], 
+         DiskBox[7, 0.12865528281750266], DiskBox[8, 0.12865528281750266], 
+         DiskBox[9, 0.12865528281750266], DiskBox[10, 0.12865528281750266], 
+         DiskBox[11, 0.12865528281750266], DiskBox[12, 0.12865528281750266], 
+         DiskBox[13, 0.12865528281750266], DiskBox[14, 0.12865528281750266], 
+         DiskBox[15, 0.12865528281750266], DiskBox[16, 0.12865528281750266], 
+         DiskBox[17, 0.12865528281750266], DiskBox[18, 0.12865528281750266], 
+         DiskBox[19, 0.12865528281750266], DiskBox[20, 0.12865528281750266], 
+         DiskBox[21, 0.12865528281750266], DiskBox[22, 0.12865528281750266], 
+         DiskBox[23, 0.12865528281750266], DiskBox[24, 0.12865528281750266], 
+         DiskBox[25, 0.12865528281750266], DiskBox[26, 0.12865528281750266], 
+         DiskBox[27, 0.12865528281750266], DiskBox[28, 0.12865528281750266], 
+         DiskBox[29, 0.12865528281750266], DiskBox[30, 0.12865528281750266], 
+         DiskBox[31, 0.12865528281750266], DiskBox[32, 0.12865528281750266], 
+         DiskBox[33, 0.12865528281750266], DiskBox[34, 0.12865528281750266], 
+         DiskBox[35, 0.12865528281750266], DiskBox[36, 0.12865528281750266], 
+         DiskBox[37, 0.12865528281750266], DiskBox[38, 0.12865528281750266], 
+         DiskBox[39, 0.12865528281750266], DiskBox[40, 0.12865528281750266], 
+         DiskBox[41, 0.12865528281750266], DiskBox[42, 0.12865528281750266], 
+         DiskBox[43, 0.12865528281750266], DiskBox[44, 0.12865528281750266], 
+         DiskBox[45, 0.12865528281750266], DiskBox[46, 0.12865528281750266], 
+         DiskBox[47, 0.12865528281750266], DiskBox[48, 0.12865528281750266], 
+         DiskBox[49, 0.12865528281750266], DiskBox[50, 0.12865528281750266], 
+         DiskBox[51, 0.12865528281750266], DiskBox[52, 0.12865528281750266], 
+         DiskBox[53, 0.12865528281750266], DiskBox[54, 0.12865528281750266], 
+         DiskBox[55, 0.12865528281750266], DiskBox[56, 0.12865528281750266], 
+         DiskBox[57, 0.12865528281750266], DiskBox[58, 0.12865528281750266], 
+         DiskBox[59, 0.12865528281750266], DiskBox[60, 0.12865528281750266], 
+         DiskBox[61, 0.12865528281750266], DiskBox[62, 0.12865528281750266], 
+         DiskBox[63, 0.12865528281750266], DiskBox[64, 0.12865528281750266], 
+         DiskBox[65, 0.12865528281750266], DiskBox[66, 0.12865528281750266], 
+         DiskBox[67, 0.12865528281750266], DiskBox[68, 0.12865528281750266], 
+         DiskBox[69, 0.12865528281750266], DiskBox[70, 0.12865528281750266], 
+         DiskBox[71, 0.12865528281750266], DiskBox[72, 0.12865528281750266], 
+         DiskBox[73, 0.12865528281750266], DiskBox[74, 0.12865528281750266], 
+         DiskBox[75, 0.12865528281750266], DiskBox[76, 0.12865528281750266], 
+         DiskBox[77, 0.12865528281750266], DiskBox[78, 0.12865528281750266], 
+         DiskBox[79, 0.12865528281750266], DiskBox[80, 0.12865528281750266], 
+         DiskBox[81, 0.12865528281750266], DiskBox[82, 0.12865528281750266], 
+         DiskBox[83, 0.12865528281750266], DiskBox[84, 0.12865528281750266], 
+         DiskBox[85, 0.12865528281750266], DiskBox[86, 0.12865528281750266], 
+         DiskBox[87, 0.12865528281750266], DiskBox[88, 0.12865528281750266], 
+         DiskBox[89, 0.12865528281750266], DiskBox[90, 0.12865528281750266], 
+         DiskBox[91, 0.12865528281750266], DiskBox[92, 0.12865528281750266], 
+         DiskBox[93, 0.12865528281750266], DiskBox[94, 0.12865528281750266], 
+         DiskBox[95, 0.12865528281750266], DiskBox[96, 0.12865528281750266], 
+         DiskBox[97, 0.12865528281750266], DiskBox[98, 0.12865528281750266], 
+         DiskBox[99, 0.12865528281750266], DiskBox[100, 0.12865528281750266], 
+         DiskBox[101, 0.12865528281750266], DiskBox[102, 0.12865528281750266],
+          DiskBox[103, 0.12865528281750266], 
+         DiskBox[104, 0.12865528281750266], DiskBox[105, 0.12865528281750266],
+          DiskBox[106, 0.12865528281750266], 
+         DiskBox[107, 0.12865528281750266], DiskBox[108, 0.12865528281750266],
+          DiskBox[109, 0.12865528281750266], 
+         DiskBox[110, 0.12865528281750266], DiskBox[111, 0.12865528281750266],
+          DiskBox[112, 0.12865528281750266], 
+         DiskBox[113, 0.12865528281750266], DiskBox[114, 0.12865528281750266],
+          DiskBox[115, 0.12865528281750266], 
+         DiskBox[116, 0.12865528281750266], DiskBox[117, 0.12865528281750266],
+          DiskBox[118, 0.12865528281750266], 
+         DiskBox[119, 0.12865528281750266], DiskBox[120, 0.12865528281750266],
+          DiskBox[121, 0.12865528281750266], 
+         DiskBox[122, 0.12865528281750266], DiskBox[123, 0.12865528281750266],
+          DiskBox[124, 0.12865528281750266], 
+         DiskBox[125, 0.12865528281750266], DiskBox[126, 0.12865528281750266],
+          DiskBox[127, 0.12865528281750266], 
+         DiskBox[128, 0.12865528281750266], DiskBox[129, 0.12865528281750266],
+          DiskBox[130, 0.12865528281750266], 
+         DiskBox[131, 0.12865528281750266], DiskBox[132, 0.12865528281750266],
+          DiskBox[133, 0.12865528281750266], 
+         DiskBox[134, 0.12865528281750266], DiskBox[135, 0.12865528281750266],
+          DiskBox[136, 0.12865528281750266], 
+         DiskBox[137, 0.12865528281750266], DiskBox[138, 0.12865528281750266],
+          DiskBox[139, 0.12865528281750266], 
+         DiskBox[140, 0.12865528281750266], DiskBox[141, 0.12865528281750266],
+          DiskBox[142, 0.12865528281750266], 
+         DiskBox[143, 0.12865528281750266], DiskBox[144, 0.12865528281750266],
+          DiskBox[145, 0.12865528281750266], 
+         DiskBox[146, 0.12865528281750266], DiskBox[147, 0.12865528281750266],
+          DiskBox[148, 0.12865528281750266], 
+         DiskBox[149, 0.12865528281750266], DiskBox[150, 0.12865528281750266],
+          DiskBox[151, 0.12865528281750266], 
+         DiskBox[152, 0.12865528281750266], DiskBox[153, 0.12865528281750266],
+          DiskBox[154, 0.12865528281750266], 
+         DiskBox[155, 0.12865528281750266], DiskBox[156, 0.12865528281750266],
+          DiskBox[157, 0.12865528281750266], 
+         DiskBox[158, 0.12865528281750266], DiskBox[159, 0.12865528281750266],
+          DiskBox[160, 0.12865528281750266], 
+         DiskBox[161, 0.12865528281750266]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{502., Automatic}]], "Output",
+ ImageSize->{506, 261},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->801445963,ExpressionUUID->"411f5ae3-15b2-41b9-9333-4a2684346084"]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"2af8540e-36cc-44bd-9491-02a81384137b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"bef95e3e-eb41-4155-baee-50018940c6ad"],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704,ExpressionUUID->"3ea1d951-21ae-4b59-9e75-50ebb2c7b4c6"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["BinaryTreeGraphQ"]],
+   "paclet:Hyperspherical/ref/BinaryTreeGraphQ"},
+  "RefLink",
+  BaseStyle->{
+   "InlineFormula", FontFamily -> 
+    "Verdana"}]], \
+"InlineFormula",ExpressionUUID->"6a19f3e9-67bd-4ad9-8ef9-e64797296457"]], \
+"SeeAlso",
+ CellID->305603750,ExpressionUUID->"380aa166-2960-4544-85d2-1d970d791778"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"031067d2-fab8-43b9-be35-e7a4089315bb"],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057,ExpressionUUID->"ff0d4649-93d8-479d-a777-bf171be6040a"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"c3455b47-7e5f-43d8-99f1-6157f6ca8d83"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Hyperspherical Package"]],
+   "paclet:Hyperspherical/tutorial/HypersphericalPackage"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938,ExpressionUUID->"8dea30f7-51fe-4961-85ac-d3e4626b1e66"],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"773af547-17eb-4206-b830-6996bc17d39b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"84837f64-9f20-4972-ba15-4e8271958150"],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248,ExpressionUUID->"f211a2b0-db48-4137-aaab-257548eaa422"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"2bb3f8a8-85a4-4c92-9e0b-1d5efbe5ac0c"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Hyperspherical Package"]],
+   "paclet:Hyperspherical/guide/HypersphericalPackage"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->559320748,ExpressionUUID->"832e3123-cacb-4cc6-9fd1-2c56a9f9806b"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"9d72224e-3baa-4dd2-92c6-2edc8a594b75"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"HypersphericalTreeGraph",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> 
+         "paclet:Hyperspherical/guide/Hyperspherical", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 7, 1, 22, 54, 41.7064852}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "Hyperspherical`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Hyperspherical Symbol", "language" -> "en", "paclet" -> "Hyperspherical",
+     "status" -> "None", "summary" -> 
+    "HypersphericalTreeGraph[n] creates a canonical hyperspherical tree graph \
+with n leaves. HypersphericalTreeGraph[{b1, b2, ...] creates a hyperspherical \
+tree graph with the branching edges bj.", "synonyms" -> {}, "tabletags" -> {},
+     "title" -> "HypersphericalTreeGraph", "titlemodifier" -> "", 
+    "windowtitle" -> "HypersphericalTreeGraph", "type" -> "Symbol", "uri" -> 
+    "Hyperspherical/ref/HypersphericalTreeGraph"}, "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 18, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[21993, 576, 577, 17, 
+  36, "PrimaryExamplesSection", "ExpressionUUID" -> "9e974098-2292-4c16-a969-
+   a33a278d84a4",
+   CellTags->"PrimaryExamplesSection",
+   CellID->732276279]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 73426, 1902}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 5231, 121, 54, "AnchorBarGrid", "ExpressionUUID" -> \
+"8171521d-f470-4582-8c27-16f009d7089c",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5851, 146, 550, 15, 56, "ObjectNameGrid", "ExpressionUUID" -> \
+"411e3874-7879-4777-92f3-c225207d8dd4"],
+Cell[6404, 163, 1569, 40, 185, "Usage", "ExpressionUUID" -> \
+"dfa541e4-e5bc-4aec-b825-0ae14d4d6425",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8010, 208, 993, 28, 38, "NotesSection", "ExpressionUUID" -> \
+"71313527-2e9d-4de6-affc-6cd4e11e4c3f",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->112940134],
+Cell[9006, 238, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"06e16662-7db5-4b0b-b844-9a9bedbebef6"],
+Cell[9095, 240, 276, 5, 70, "Notes", "ExpressionUUID" -> \
+"54267a8c-f5b5-4d8b-9655-14ec6b622a28",
+ CellID->1067943069],
+Cell[9374, 247, 366, 9, 70, "Notes", "ExpressionUUID" -> \
+"9054181e-e5e6-4bff-af0e-09ffd6e88b0c",
+ CellID->372477616],
+Cell[9743, 258, 1287, 28, 70, "2ColumnTableMod", "ExpressionUUID" -> \
+"e6f30854-5747-4b47-a25f-57fe271fb76e",
+ CellID->191798210],
+Cell[11033, 288, 373, 10, 70, "Notes", "ExpressionUUID" -> \
+"80499cee-ba71-4a91-85a0-249169e69700",
+ CellID->17094574],
+Cell[11409, 300, 473, 10, 70, "Notes", "ExpressionUUID" -> \
+"7081de3a-111c-437c-abad-ce8630f98cf5",
+ CellID->598514318],
+Cell[11885, 312, 4775, 128, 70, "2ColumnTableMod", "ExpressionUUID" -> \
+"35c5578f-6713-4137-b2e0-700f967f81ae",
+ CellID->241853190],
+Cell[16663, 442, 337, 9, 70, "Notes", "ExpressionUUID" -> \
+"7f54585d-caa4-49b7-b739-4790d61c9932",
+ CellID->384598807],
+Cell[17003, 453, 2173, 51, 70, "2ColumnTableMod", "ExpressionUUID" -> \
+"c4fae45e-35bd-44ad-83cf-f82618fed1f7",
+ CellID->62690934],
+Cell[19179, 506, 680, 13, 70, "Notes", "ExpressionUUID" -> \
+"ec08be44-170c-4b8a-ba64-19e9bbf85e70",
+ CellID->377161115],
+Cell[19862, 521, 188, 4, 70, "Notes", "ExpressionUUID" -> \
+"0c637cc2-fd73-492a-8807-088bdd96cd11",
+ CellID->433269122],
+Cell[20053, 527, 437, 9, 70, "Notes", "ExpressionUUID" -> \
+"5186dfe1-48af-468e-a093-373c84089d08",
+ CellID->397806360],
+Cell[20493, 538, 205, 4, 70, "Notes", "ExpressionUUID" -> \
+"d41db415-4331-4edf-b710-5c93f80b821c",
+ CellID->56269575],
+Cell[20701, 544, 244, 7, 70, "Notes", "ExpressionUUID" -> \
+"36d197e7-b504-4893-b0aa-bc9a7ca64032",
+ CellID->228269390],
+Cell[20948, 553, 919, 16, 70, "2ColumnTableMod", "ExpressionUUID" -> \
+"e0efd5a2-7559-4247-ba66-338b5acd352b",
+ CellID->61722238],
+Cell[21870, 571, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"35d267ea-473e-4e3c-8a01-8b2823b13721"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[21993, 576, 577, 17, 36, "PrimaryExamplesSection", "ExpressionUUID" -> \
+"9e974098-2292-4c16-a969-a33a278d84a4",
+ CellTags->"PrimaryExamplesSection",
+ CellID->732276279],
+Cell[CellGroupData[{
+Cell[22595, 597, 308, 7, 30, "ExampleSection", "ExpressionUUID" -> \
+"191d005f-db1e-427f-992b-6d3517685ffe",
+ CellID->103231230],
+Cell[22906, 606, 177, 3, 26, "Input", "ExpressionUUID" -> \
+"182076ee-962a-444e-8cba-e90679e27951",
+ CellID->27630762],
+Cell[23086, 611, 159, 2, 38, "ExampleText", "ExpressionUUID" -> \
+"8ef0e9f6-1d36-4d03-8624-3a2812ce19f9",
+ CellID->286144138],
+Cell[CellGroupData[{
+Cell[23270, 617, 173, 3, 26, "Input", "ExpressionUUID" -> \
+"60153cd8-d253-4cad-936e-b3300248b2ab",
+ CellID->45310659],
+Cell[23446, 622, 1888, 42, 211, "Output", "ExpressionUUID" -> \
+"f25c5bb8-d759-4f39-87d3-1e3725a74b91",
+ CellID->171415795]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25371, 669, 241, 5, 8, "ExampleDelimiter", "ExpressionUUID" -> \
+"749ea4a7-8b43-46e3-81a5-13a20e4cf3f9",
+ CellID->88940421],
+Cell[25615, 676, 177, 3, 26, "Input", "ExpressionUUID" -> \
+"4f48e88a-bc88-4cf0-88d7-e1854f510c8c",
+ CellID->77991735],
+Cell[25795, 681, 177, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"3c8712e8-d476-4782-8c97-97f6f3350bc9",
+ CellID->634793025],
+Cell[CellGroupData[{
+Cell[25997, 688, 389, 11, 70, "Input", "ExpressionUUID" -> \
+"d2da8242-92f7-489f-9418-82b524e6c38e",
+ CellID->103227495],
+Cell[26389, 701, 1414, 33, 70, "Output", "ExpressionUUID" -> \
+"3e4be7c5-826f-45e1-8cec-b0939d65e278",
+ CellID->199933771]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27852, 740, 242, 5, 70, "ExampleDelimiter", "ExpressionUUID" -> \
+"4e999a20-8438-4b85-8ca4-1de89aa5d70e",
+ CellID->193204851],
+Cell[28097, 747, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"8418ffbc-7b85-4e86-bc00-6a2e0120805c",
+ CellID->201452989],
+Cell[28278, 752, 198, 4, 70, "ExampleText", "ExpressionUUID" -> \
+"bf073911-7bc0-48e5-a13f-36b910c59426",
+ CellID->42242854],
+Cell[CellGroupData[{
+Cell[28501, 760, 637, 19, 70, "Input", "ExpressionUUID" -> \
+"46601739-46cd-4a1f-9ad8-ed8aabacdf84",
+ CellID->867382428],
+Cell[29141, 781, 2387, 52, 70, "Output", "ExpressionUUID" -> \
+"e9d447b9-d441-45d4-a6cf-4a2412da8d77",
+ CellID->121941248]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31589, 840, 300, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"736aa626-7bff-41c9-89ec-373eed5a59ab",
+ CellID->1293636265],
+Cell[31892, 849, 176, 3, 70, "Input", "ExpressionUUID" -> \
+"99e36e76-e617-40d8-a719-0bd2545c2abe",
+ CellID->9335487],
+Cell[32071, 854, 597, 16, 70, "ExampleText", "ExpressionUUID" -> \
+"cb3dc8a1-1bc1-4dd7-bad8-0e0b9c50b51e",
+ CellID->72431830],
+Cell[32671, 872, 407, 11, 70, "Input", "ExpressionUUID" -> \
+"c35fe469-4fd0-454a-90bc-f630088b1c85",
+ CellID->63769814]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33115, 888, 302, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"4c281054-7d22-40ae-9e71-fe255842b3a4",
+ CellID->2061341341],
+Cell[CellGroupData[{
+Cell[33442, 899, 313, 7, 70, "ExampleSubsection", "ExpressionUUID" -> \
+"a10748f8-d267-4963-8af2-765aaf445475",
+ CellID->1757724783],
+Cell[33758, 908, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"0ba2a817-560f-4bdc-847c-6bca2f587d71",
+ CellID->448344550],
+Cell[33939, 913, 853, 24, 70, "ExampleText", "ExpressionUUID" -> \
+"8a1293b8-58c0-4a76-aa00-1ce91d076071",
+ CellID->70820846],
+Cell[CellGroupData[{
+Cell[34817, 941, 245, 5, 70, "Input", "ExpressionUUID" -> \
+"ea10c144-010b-42ae-b714-857e19d016bb",
+ CellID->24500685],
+Cell[35065, 948, 3162, 69, 70, "Output", "ExpressionUUID" -> \
+"ac75ff76-d2a6-412d-9246-52c1546c0908",
+ CellID->125927484]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38264, 1022, 242, 5, 70, "ExampleDelimiter", "ExpressionUUID" -> \
+"627db35e-a223-4a98-a619-7545a012dfad",
+ CellID->466651059],
+Cell[38509, 1029, 177, 3, 70, "Input", "ExpressionUUID" -> \
+"02d6c113-29b1-4092-86fe-189af763fa82",
+ CellID->57376983],
+Cell[38689, 1034, 189, 4, 70, "ExampleText", "ExpressionUUID" -> \
+"8c3ae90a-d39c-41b5-b446-0441771591f1",
+ CellID->134429725],
+Cell[CellGroupData[{
+Cell[38903, 1042, 251, 5, 70, "Input", "ExpressionUUID" -> \
+"125db01e-a19f-4483-8f17-4b325f32a088",
+ CellID->936984449],
+Cell[39157, 1049, 2973, 69, 70, "Output", "ExpressionUUID" -> \
+"0da1b1a9-e3bd-4c4d-ad54-0328fcf7b889",
+ CellID->149545834]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42179, 1124, 242, 5, 70, "ExampleDelimiter", "ExpressionUUID" -> \
+"3dbbe176-1842-4e79-bd1d-ac36c3e40174",
+ CellID->441446942],
+Cell[42424, 1131, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"7b602f03-05f2-4977-930e-cba08e5682c0",
+ CellID->311439080],
+Cell[42605, 1136, 178, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"44234e64-cd7b-419d-a282-81b1b317b6ce",
+ CellID->235520864],
+Cell[CellGroupData[{
+Cell[42808, 1143, 476, 13, 70, "Input", "ExpressionUUID" -> \
+"b6e4f737-042a-4b9f-b3a2-62644a4266b0",
+ CellID->38351132],
+Cell[43287, 1158, 4416, 98, 70, "Output", "ExpressionUUID" -> \
+"9bf88651-8b14-4323-abef-4e939af661e2",
+ CellID->241046179]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[47776, 1264, 317, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"a3594e46-3885-43dc-ba20-84da7e58f50a",
+ CellID->2123667759],
+Cell[48096, 1273, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"dab02c5c-ff62-4ae5-9106-ea78a4a4aa61",
+ CellID->208635644],
+Cell[48277, 1278, 183, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"aa95a40e-ca72-4e21-b40f-3722bcb7aa8f",
+ CellID->31065053],
+Cell[48463, 1283, 215, 5, 70, "Input", "ExpressionUUID" -> \
+"609c2430-0d6c-4028-a35d-1b45ded96031",
+ CellID->98987439],
+Cell[CellGroupData[{
+Cell[48703, 1292, 165, 3, 70, "Input", "ExpressionUUID" -> \
+"1737e0fb-2790-416e-8e49-eddb3f9e2074",
+ CellID->7294501],
+Cell[48871, 1297, 215, 5, 35, "Output", "ExpressionUUID" -> \
+"96cc8094-be81-445f-9e57-08609a13a6dc",
+ CellID->57543936]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49123, 1307, 165, 3, 70, "Input", "ExpressionUUID" -> \
+"2a2c1fc8-e564-469a-8f75-d23531021f5f",
+ CellID->188510204],
+Cell[49291, 1312, 215, 5, 35, "Output", "ExpressionUUID" -> \
+"39e24e64-8336-4cec-9343-0fe0a3d78de5",
+ CellID->28447971]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49543, 1322, 160, 3, 70, "Input", "ExpressionUUID" -> \
+"e693d178-295f-42fd-a0ed-e15d94c3e21d",
+ CellID->10358928],
+Cell[49706, 1327, 215, 5, 35, "Output", "ExpressionUUID" -> \
+"3c6d581e-18ef-4481-bdc4-a2c6f261d0fe",
+ CellID->74440102]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[49970, 1338, 307, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"4ecb569b-3c31-4cdf-abcd-1e9831093387",
+ CellID->589267740],
+Cell[50280, 1347, 177, 3, 70, "Input", "ExpressionUUID" -> \
+"174851aa-fa5e-4adc-95ce-31962bbde002",
+ CellID->38771262],
+Cell[50460, 1352, 174, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"0e19b23a-559d-446d-9f6e-a592e2fe7170",
+ CellID->13091054],
+Cell[CellGroupData[{
+Cell[50659, 1359, 512, 15, 70, "Input", "ExpressionUUID" -> \
+"92b67565-4550-4642-b499-88e456e78666",
+ CellID->131260120],
+Cell[51174, 1376, 17502, 382, 70, "Output", "ExpressionUUID" -> \
+"411f5ae3-15b2-41b9-9333-4a2684346084",
+ CellID->801445963]
+}, Open  ]]
+}, Closed]],
+Cell[68703, 1762, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"2af8540e-36cc-44bd-9491-02a81384137b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68826, 1767, 402, 13, 70, "SeeAlsoSection", "ExpressionUUID" -> \
+"3ea1d951-21ae-4b59-9e75-50ebb2c7b4c6",
+ CellID->1255426704],
+Cell[69231, 1782, 377, 10, 70, "SeeAlso", "ExpressionUUID" -> \
+"380aa166-2960-4544-85d2-1d970d791778",
+ CellID->305603750]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[69645, 1797, 404, 13, 70, "TutorialsSection", "ExpressionUUID" -> \
+"ff0d4649-93d8-479d-a777-bf171be6040a",
+ CellID->250839057],
+Cell[70052, 1812, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"c3455b47-7e5f-43d8-99f1-6157f6ca8d83"],
+Cell[70141, 1814, 263, 6, 70, "Tutorials", "ExpressionUUID" -> \
+"8dea30f7-51fe-4961-85ac-d3e4626b1e66",
+ CellID->341631938],
+Cell[70407, 1822, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"773af547-17eb-4206-b830-6996bc17d39b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70530, 1827, 408, 13, 70, "MoreAboutSection", "ExpressionUUID" -> \
+"f211a2b0-db48-4137-aaab-257548eaa422",
+ CellID->38303248],
+Cell[70941, 1842, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"2bb3f8a8-85a4-4c92-9e0b-1d5efbe5ac0c"],
+Cell[71030, 1844, 260, 6, 70, "MoreAbout", "ExpressionUUID" -> \
+"832e3123-cacb-4cc6-9fd1-2c56a9f9806b",
+ CellID->559320748]
+}, Open  ]],
+Cell[71305, 1853, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"9d72224e-3baa-4dd2-92c6-2edc8a594b75"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

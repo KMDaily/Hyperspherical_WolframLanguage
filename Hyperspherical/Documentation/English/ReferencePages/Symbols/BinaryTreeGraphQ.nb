@@ -1,0 +1,1197 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42688,       1187]
+NotebookOptionsPosition[     31727,        890]
+NotebookOutlinePosition[     33922,        949]
+CellTagsIndexPosition[     33837,        944]
+WindowTitle->BinaryTreeGraphQ
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["HYPERSPHERICAL SYMBOL", "PacletNameCell",ExpressionUUID->
+     "5b812f24-1b10-4c1e-a34f-5b43bdc2868e"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"143fc823-d59b-44c3-9948-a06fdfe9a366"],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Hyperspherical Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/tutorial/HypersphericalPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "dc460fef-2d7b-42d3-b278-cb26bda57b6e"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"fbbe8a95-c03f-4bfd-b9e1-fd14903d001b"],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"TreeGraphQ\"\>":>Documentation`HelpLookup[
+       "paclet:ref/TreeGraphQ"], "\<\"DirectedGraphQ\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DirectedGraphQ"], "\<\"DirectedEdge\"\>":>
+       Documentation`HelpLookup["paclet:ref/DirectedEdge"], "\<\"Graph\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Graph"], "\<\"HypersphericalTreeGraph\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/ref/HypersphericalTreeGraph"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "2ba996b1-f2b7-4ca6-aa8e-04ed0b7286e8"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"d95703ec-1a04-458f-aade-bd4224c19579"],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Hyperspherical Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Hyperspherical/guide/HypersphericalPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "dfcc6b48-04b6-48fc-b709-e1495c3e0945"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"5f3d4a96-86ac-4cda-9aa6-fd5e17747a9b"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Hyperspherical/ref/BinaryTreeGraphQ\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Hyperspherical/ref/BinaryTreeGraphQ"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Hyperspherical/ref/\
+BinaryTreeGraphQ.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$7625], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "Hyperspherical/ref/BinaryTreeGraphQ", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "d5d98787-6d8b-42af-a16c-56a14f956378"]
+    }], "AnchorBar",ExpressionUUID->"6827ce3e-50c3-4962-90c0-555ee0fe6219"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"5bf49397-c934-4f64-9b23-0aeb601c382a"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["BinaryTreeGraphQ", "ObjectName",ExpressionUUID->
+  "88c16b52-601f-49d0-9b00-1048df596617"],
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{8, 0}],
+    CacheGraphics->False],
+   Spacer[8],
+   Selectable->False]],ExpressionUUID->"ddeb6e74-2d6b-4fbc-a221-71fff6715607"],
+ Cell[BoxData[
+ ""], "ObjectNameTranslation",ExpressionUUID->
+  "e35b1cfe-5996-4a7d-aa45-e42da33c474f"]
+}], "ObjectNameGrid",ExpressionUUID->"f60e174a-df27-4fa5-9b83-bfa6e9329bae"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"BinaryTreeGraphQ", "[", "g", "]"}]], "InlineFormula",
+      ExpressionUUID->"98e4eb24-55cb-4e2d-82c4-1b905214a064"],
+     " \[LineSeparator]yields ",
+     ButtonBox["True",
+      BaseStyle->"Link",
+      ButtonData->"paclet:ref/True"],
+     " if the graph ",
+     Cell[BoxData[
+      StyleBox["g", "TI"]], "InlineFormula",ExpressionUUID->
+      "43fb5bfd-2f36-403d-8489-a517e8e91d0f"],
+     " is a binary tree and ",
+     ButtonBox["False",
+      BaseStyle->"Link",
+      ButtonData->"paclet:ref/False"],
+     " otherwise."
+    }],ExpressionUUID->"ff0245c6-a42f-4bdc-b7d0-d6aa31c86444"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436,ExpressionUUID->"5ddae0b9-03de-4d66-b79e-d380c1520124"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6],
+     Selectable->False]],ExpressionUUID->
+    "0650959f-09a7-4b13-839e-83c2d911e264"],
+   "Details"
+  }], "NotesFrameText",ExpressionUUID->"6a7d3c9a-3577-4f2f-9bcb-70740c205568"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"73096034-30a8-4566-b269-e61d8c05ce8c"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->55586040,ExpressionUUID->"a704d963-0bff-45fa-9dac-fcb0cc3546ba"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"675bcf44-68fd-4262-80df-987e60162343"],
+
+Cell["\<\
+A binary tree is defined as a directed tree graph with two branches leaving \
+each vertex. The graph is directed from the root to the leaves.\
+\>", "Notes",
+ CellID->1067943069,ExpressionUUID->"eec78f55-418d-4dfc-9191-cafded8ed4c5"],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"3541cb62-6ab2-433e-807e-70d0f0a3b43e"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"3f43fd14-3ad1-47cc-87f6-0c2690d6998e"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(6)", "ExampleCount",ExpressionUUID->
+  "efe8ec90-189e-4583-b3c6-7275a596a25d"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->244883767,ExpressionUUID->"c1e990bb-d9c4-4ef2-8022-65818adcf94b"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "7f97b960-afc7-4230-abea-2008180d8241"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->254043245,ExpressionUUID->"b72e244f-2a40-44e9-bce8-c6a792d80806"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->185492007,ExpressionUUID->"9b8e6a02-9d1d-4354-b4fd-63d3cb5c168d"],
+
+Cell["Test whether a graph is a binary tree graph:", "ExampleText",
+ CellID->697259411,ExpressionUUID->"ba2f5e79-34c6-43b2-b67c-e7dba3782cc1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[DirectedEdge]", "2"}], ",", 
+    RowBox[{"1", "\[DirectedEdge]", "3"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "4"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "5"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->42829407,ExpressionUUID->"8a494c61-736b-4aca-a231-6a91ab51ea61"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}}, Null}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{0.8944271909999159, 1.7888543819998317`}, {
+       0.4472135954999579, 0.8944271909999159}, {1.3416407864998738`, 
+       0.8944271909999159}, {0., 0.}, {0.8944271909999159, 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}}, 0.020874891668923312`]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.020874891668923312], DiskBox[2, 0.020874891668923312], 
+         DiskBox[3, 0.020874891668923312], DiskBox[4, 0.020874891668923312], 
+         DiskBox[5, 0.020874891668923312]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{334, 432},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->24792174,ExpressionUUID->"45966cac-e6f5-47dc-9e48-1d504dba0ed1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "%", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->45006516,ExpressionUUID->"1c1ce41e-3e52-4086-8755-ca5e1f5e2275"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->1026905005,ExpressionUUID->"dbb6a512-9ecc-4cc1-bcf3-5c410887d8c0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "10c5de57-1f82-4505-9c35-e1f5021da907"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->515901,ExpressionUUID->"c4943399-a97a-487c-899c-a770ae254715"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "BinaryTreeGraphQ"], "InlineFormula",ExpressionUUID->
+  "16d2a7e6-63f1-44fe-aee0-afbaa4f9b781"],
+ " gives ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["False"]],"paclet:ref/False"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "0c2cc44d-4dcc-4d33-8126-bb4c032c40df"],
+ " for inputs that are not directed graphs:"
+}], "ExampleText",
+ CellID->39329498,ExpressionUUID->"e9b36b76-a1b9-4445-afed-e78693b217a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[UndirectedEdge]", "2"}], ",", 
+    RowBox[{"1", "\[UndirectedEdge]", "3"}], ",", 
+    RowBox[{"2", "\[UndirectedEdge]", "4"}], ",", 
+    RowBox[{"2", "\[UndirectedEdge]", "5"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->181930319,ExpressionUUID->"d2f6616f-89be-457f-839a-c46bd6868755"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5}, {Null, {{1, 2}, {1, 3}, {2, 4}, {2, 5}}}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{0.8944271909999159, 1.7888543819998317`}, {
+       0.4472135954999579, 0.8944271909999159}, {1.3416407864998738`, 
+       0.8944271909999159}, {0., 0.}, {0.8944271909999159, 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Arrowheads[0.], ArrowBox[{1, 2}, 0.020874891668923312`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 3}, 0.020874891668923312`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 4}, 0.020874891668923312`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 5}, 0.020874891668923312`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.020874891668923312], DiskBox[2, 0.020874891668923312], 
+         DiskBox[3, 0.020874891668923312], DiskBox[4, 0.020874891668923312], 
+         DiskBox[5, 0.020874891668923312]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{334, 432},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->622380676,ExpressionUUID->"f663dd64-e111-43d8-8e80-de1665c7a99b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->122005935,ExpressionUUID->"0e62e663-b06d-4cab-ba27-dab6ec705643"],
+
+Cell[BoxData["False"], "Output",
+ ImageSize->{39, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->636555836,ExpressionUUID->"805df638-b05c-437f-8bf2-fb9bbf52acbf"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "5e248036-f261-42f0-a6d6-337997bb7609"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1293636265,ExpressionUUID->"87ed5528-897e-473c-8e96-5f4a68aeb670"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->293700631,ExpressionUUID->"9345794f-f646-44a3-9965-04f87d61d179"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "BinaryTreeGraphQ"], "InlineFormula",ExpressionUUID->
+  "bf9df08c-8fd6-49f2-bd9b-863476bd63a3"],
+ " gives ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["False"]],"paclet:ref/False"},
+   "RefLink",
+   BaseStyle->{"InlineFormula"}]], "InlineFormula",ExpressionUUID->
+  "83850b59-24e6-44d5-b76c-2148e26d90d2"],
+ " for directed tree graphs that have only one branch leaving a vertex, or \
+more than two branches leaving a vertex."
+}], "ExampleText",
+ CellID->812887425,ExpressionUUID->"968729a0-56a4-425e-9978-2305233c942c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[DirectedEdge]", "2"}], ",", 
+    RowBox[{"1", "\[DirectedEdge]", "3"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "4"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->62495013,ExpressionUUID->"1d327eb5-2212-4118-bfc7-87ba5d7c5223"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4}, {{{1, 2}, {1, 3}, {2, 4}}, Null}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{0.4629100498862757, 1.8516401995451028`}, {0., 
+       0.9258200997725514}, {0.9258200997725514, 0.9258200997725514}, {0., 
+       0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}}, 0.02139620166504999]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.02139620166504999], DiskBox[2, 0.02139620166504999], 
+         DiskBox[3, 0.02139620166504999], DiskBox[4, 0.02139620166504999]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{230, 432},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->6252959,ExpressionUUID->"c32e60a0-a04a-4cad-a9db-0104f5ceefee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "%", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->236896672,ExpressionUUID->"45eb58cf-f245-498f-b1ca-07897a1e6b52"],
+
+Cell[BoxData["False"], "Output",
+ ImageSize->{39, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->377903854,ExpressionUUID->"6b391fb0-d16c-4a00-a16e-c5799bd1b7e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[DirectedEdge]", "2"}], ",", 
+    RowBox[{"1", "\[DirectedEdge]", "3"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "4"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "5"}], ",", 
+    RowBox[{"2", "\[DirectedEdge]", "6"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->97676732,ExpressionUUID->"e261d244-d355-4e7c-8890-3e07212d5736"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 
+      6}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {2, 6}}, Null}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{1.2247448713915892`, 1.6329931618554523`}, {
+       0.8164965809277261, 0.8164965809277261}, {1.6329931618554523`, 
+       0.8164965809277261}, {0., 0.}, {0.8164965809277261, 0.}, {
+       1.6329931618554523`, 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {2, 6}}, 
+          0.019562323618881772`]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.019562323618881772], DiskBox[2, 0.019562323618881772], 
+         DiskBox[3, 0.019562323618881772], DiskBox[4, 0.019562323618881772], 
+         DiskBox[5, 0.019562323618881772], 
+         DiskBox[6, 0.019562323618881772]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 359},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->151590466,ExpressionUUID->"2dadfd1e-7fda-4275-bf23-a328d3a4a3b0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "%", "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->177111117,ExpressionUUID->"ae4c585a-8b73-4408-b726-cdeb382a4c46"],
+
+Cell[BoxData["False"], "Output",
+ ImageSize->{39, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->4603504,ExpressionUUID->"3754b4cc-7203-4631-9dca-2e4f7ec1d97d"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Generalizations & Extensions",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "00ecf907-54df-464a-a5cd-484e6ddb73f7"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1020263627,ExpressionUUID->"63cf4da7-58f4-494a-b0d4-0b78506c1652"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->65841665,ExpressionUUID->"9bda785e-c380-40dc-af48-510da506e4fe"],
+
+Cell["\<\
+A hyperspherical tree graph is a special case of a binary tree graph.\
+\>", "ExampleText",
+ CellID->239605270,ExpressionUUID->"0fd9cdfc-b4cd-48c2-a0a0-34645df2bd06"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", 
+  RowBox[{"HypersphericalTreeGraph", "[", "4", "]"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->27055248,ExpressionUUID->"d0fd8732-75ad-498b-8d58-5cdd1de2738f"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->351664650,ExpressionUUID->"a29723be-bb52-4d02-8865-b5f3b116b392"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount",ExpressionUUID->
+  "82b2af64-2400-4a7b-b6b4-203eac49aeb1"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->2123667759,ExpressionUUID->"74ca190c-ed89-4f54-8a9d-a3435038f969"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->406673074,ExpressionUUID->"8d8a2323-adda-45f0-b1b1-25e85f2ec87e"],
+
+Cell["\<\
+A binary tree graph is a special case of a directed tree graph.\
+\>", "ExampleText",
+ CellID->575477310,ExpressionUUID->"c470e1fc-5e49-4e2c-9317-0102f3e782b2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5}, {{{1, 2}, {1, 3}, {2, 4}, {2, 5}}, Null}]]}, 
+      TagBox[
+       GraphicsGroupBox[
+        GraphicsComplexBox[{{0.8944271909999159, 1.7888543819998317`}, {
+         0.4472135954999579, 0.8944271909999159}, {1.3416407864998738`, 
+         0.8944271909999159}, {0., 0.}, {0.8944271909999159, 0.}}, {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}}, 0.020874891668923312`]}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.020874891668923312], DiskBox[2, 0.020874891668923312],
+            DiskBox[3, 0.020874891668923312], 
+           DiskBox[4, 0.020874891668923312], 
+           DiskBox[5, 0.020874891668923312]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->548368704,ExpressionUUID->"154d8328-d904-4ced-8c13-e372c19c3586"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTreeGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->6639560,ExpressionUUID->"4cbfbf41-101b-4b84-893e-ea9c027d6af2"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->731941808,ExpressionUUID->"02748d1b-3030-4ca0-8669-d84f93741957"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->404905900,ExpressionUUID->"3e9d76cd-a649-4707-8273-ecc0d63f1e78"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->4620519,ExpressionUUID->"20d78f4b-0b4f-498c-b3ab-e40595091ad2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectedGraphQ", "[", "g", "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->966548910,ExpressionUUID->"db344f9d-05f0-452a-bb8d-df097d84b1dc"],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->733484762,ExpressionUUID->"6f43015b-d07d-47ab-b992-6703b2878147"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\t", "ExampleDelimiter",ExpressionUUID->
+   "37592fea-10dc-45d4-8973-277d5abf305c"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->124851216,ExpressionUUID->"c3528a39-d3de-486e-8eeb-9be21040208e"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Hyperspherical`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->161171731,ExpressionUUID->"b040191c-2bea-46b0-be5c-d93a8574097f"],
+
+Cell["\<\
+A binary tree graph with n leaves has n-1 branching vertices: \
+\>", "ExampleText",
+ CellID->43894502,ExpressionUUID->"6536bf18-2526-40fc-a486-000c4137f121"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectedGraph", "[", 
+  RowBox[{
+   RowBox[{"CompleteKaryTree", "[", 
+    RowBox[{"4", ",", "2"}], "]"}], ",", "\"\<Acyclic\>\""}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->141107876,ExpressionUUID->"edd0b87c-b00d-41f8-b2ca-81d7ca9d31e8"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {
+       SparseArray[
+       Automatic, {15, 15}, 0, {
+        1, {{0, 2, 4, 6, 8, 10, 12, 14, 14, 14, 14, 14, 14, 14, 14, 14}, {{
+          2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {
+          14}, {15}}}, Pattern}], Null}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{2.4748737341529163`, 2.1213203435596424`}, {
+       1.0606601717798212`, 1.414213562373095}, {3.8890872965260113`, 
+       1.414213562373095}, {0.35355339059327373`, 0.7071067811865475}, {
+       1.7677669529663687`, 0.7071067811865475}, {3.181980515339464, 
+       0.7071067811865475}, {4.596194077712559, 0.7071067811865475}, {0., 
+       0.}, {0.7071067811865475, 0.}, {1.414213562373095, 0.}, {
+       2.1213203435596424`, 0.}, {2.82842712474619, 0.}, {3.5355339059327373`,
+        0.}, {4.242640687119285, 0.}, {4.949747468305833, 0.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {1, 3}, {2, 4}, {2, 5}, {3, 6}, {3, 7}, {4, 8}, {4,
+           9}, {5, 10}, {5, 11}, {6, 12}, {6, 13}, {7, 14}, {7, 15}}, 
+          0.04275994200999855]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.04275994200999855], DiskBox[2, 0.04275994200999855], 
+         DiskBox[3, 0.04275994200999855], DiskBox[4, 0.04275994200999855], 
+         DiskBox[5, 0.04275994200999855], DiskBox[6, 0.04275994200999855], 
+         DiskBox[7, 0.04275994200999855], DiskBox[8, 0.04275994200999855], 
+         DiskBox[9, 0.04275994200999855], DiskBox[10, 0.04275994200999855], 
+         DiskBox[11, 0.04275994200999855], DiskBox[12, 0.04275994200999855], 
+         DiskBox[13, 0.04275994200999855], DiskBox[14, 0.04275994200999855], 
+         DiskBox[15, 0.04275994200999855]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ ImageSize->{364, 166},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->141782328,ExpressionUUID->"6995698b-f4de-41e7-9a2a-e0d93168bd68"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Count", "[", 
+   RowBox[{
+    RowBox[{"VertexOutDegree", "[", "%", "]"}], ",", "0"}], "]"}], "-", 
+  RowBox[{"Count", "[", 
+   RowBox[{
+    RowBox[{"VertexOutDegree", "[", "%", "]"}], ",", "2"}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->19559512,ExpressionUUID->"cdf6ebbe-8bc8-414f-b5a0-e0e36e27fcb8"],
+
+Cell[BoxData["1"], "Output",
+ ImageSize->{11, 14},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->260971820,ExpressionUUID->"31b7c6d0-2e87-402b-baf9-0e346c804fee"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"d32a84be-467e-457b-b76a-3b9afb650513"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"4e1383ad-c994-45bd-bf55-2068c60f64d8"],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704,ExpressionUUID->"8b109ef0-08e7-4fab-9b93-eaf9c2e6b309"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["HypersphericalTreeGraph"]],
+   "paclet:Hyperspherical/ref/HypersphericalTreeGraph"},
+  "RefLink",
+  BaseStyle->{
+   "InlineFormula", FontFamily -> 
+    "Verdana"}]], \
+"InlineFormula",ExpressionUUID->"7baefbdd-8040-4660-b660-a27e29ec9bf1"]], \
+"SeeAlso",
+ CellID->396566460,ExpressionUUID->"8b6383f0-41f3-49da-8e4e-bad498153741"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"402c19f1-ec02-465b-994d-8d4e77fcbf0f"],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057,ExpressionUUID->"790ad637-cb36-4cf6-85d2-a7b2fcb05523"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"506742f4-4597-42a7-b730-94b5e7088368"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Hyperspherical Package"]],
+   "paclet:Hyperspherical/tutorial/HypersphericalPackage"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938,ExpressionUUID->"9b119e3d-5b8c-4d42-8e06-ceb51af14148"],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"eaf5ff8f-8b63-4313-85dc-2d553b07df11"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6],
+   Selectable->False]],ExpressionUUID->"0c8d7e0b-6558-4fb1-aa57-c393f19f4168"],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248,ExpressionUUID->"d4040035-2f54-4925-b84d-e470ef55fdf7"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"e78eadd2-49b3-4f9c-a909-ba91080cf10d"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Hyperspherical Package"]],
+   "paclet:Hyperspherical/guide/HypersphericalPackage"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->15154703,ExpressionUUID->"59433927-421c-4ca0-b1da-74e094bf2df2"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"3e42fcda-b467-45a4-a181-9913596eb9c6"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"BinaryTreeGraphQ",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> 
+         "paclet:Hyperspherical/guide/Hyperspherical", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2017, 7, 1, 22, 54, 37.4511765}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "Hyperspherical`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Hyperspherical Symbol", "language" -> "en", "paclet" -> "Hyperspherical",
+     "status" -> "None", "summary" -> 
+    "BinaryTreeGraphQ[g] yields True if the graph g is a binary tree and \
+False otherwise.", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "BinaryTreeGraphQ", "titlemodifier" -> "", "windowtitle" -> 
+    "BinaryTreeGraphQ", "type" -> "Symbol", "uri" -> 
+    "Hyperspherical/ref/BinaryTreeGraphQ"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "11.1 for Microsoft Windows (64-bit) (April 18, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8917, 236, 577, 17, 
+  36, "PrimaryExamplesSection", "ExpressionUUID" -> "c1e990bb-
+   d9c4-4ef2-8022-65818adcf94b",
+   CellTags->"PrimaryExamplesSection",
+   CellID->244883767]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 33627, 935}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 5373, 122, 54, "AnchorBarGrid", "ExpressionUUID" -> \
+"5bf49397-c934-4f64-9b23-0aeb601c382a",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5986, 147, 543, 15, 56, "ObjectNameGrid", "ExpressionUUID" -> \
+"f60e174a-df27-4fa5-9b83-bfa6e9329bae"],
+Cell[6532, 164, 896, 24, 110, "Usage", "ExpressionUUID" -> \
+"5ddae0b9-03de-4d66-b79e-d380c1520124",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7465, 193, 992, 28, 38, "NotesSection", "ExpressionUUID" -> \
+"a704d963-0bff-45fa-9dac-fcb0cc3546ba",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->55586040],
+Cell[8460, 223, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"675bcf44-68fd-4262-80df-987e60162343"],
+Cell[8549, 225, 242, 4, 70, "Notes", "ExpressionUUID" -> \
+"eec78f55-418d-4dfc-9191-cafded8ed4c5",
+ CellID->1067943069],
+Cell[8794, 231, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"3541cb62-6ab2-433e-807e-70d0f0a3b43e"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8917, 236, 577, 17, 36, "PrimaryExamplesSection", "ExpressionUUID" -> \
+"c1e990bb-d9c4-4ef2-8022-65818adcf94b",
+ CellTags->"PrimaryExamplesSection",
+ CellID->244883767],
+Cell[CellGroupData[{
+Cell[9519, 257, 308, 7, 30, "ExampleSection", "ExpressionUUID" -> \
+"b72e244f-2a40-44e9-bce8-c6a792d80806",
+ CellID->254043245],
+Cell[9830, 266, 178, 3, 26, "Input", "ExpressionUUID" -> \
+"9b8e6a02-9d1d-4354-b4fd-63d3cb5c168d",
+ CellID->185492007],
+Cell[10011, 271, 142, 1, 38, "ExampleText", "ExpressionUUID" -> \
+"ba2f5e79-34c6-43b2-b67c-e7dba3782cc1",
+ CellID->697259411],
+Cell[CellGroupData[{
+Cell[10178, 276, 378, 9, 26, "Input", "ExpressionUUID" -> \
+"8a494c61-736b-4aca-a231-6a91ab51ea61",
+ CellID->42829407],
+Cell[10559, 287, 1278, 26, 453, "Output", "ExpressionUUID" -> \
+"45966cac-e6f5-47dc-9e48-1d504dba0ed1",
+ CellID->24792174]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11874, 318, 166, 3, 70, "Input", "ExpressionUUID" -> \
+"1c1ce41e-3e52-4086-8755-ca5e1f5e2275",
+ CellID->45006516],
+Cell[12043, 323, 217, 5, 35, "Output", "ExpressionUUID" -> \
+"dbb6a512-9ecc-4cc1-bcf3-5c410887d8c0",
+ CellID->1026905005]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12297, 333, 239, 5, 70, "ExampleDelimiter", "ExpressionUUID" -> \
+"c4943399-a97a-487c-899c-a770ae254715",
+ CellID->515901],
+Cell[12539, 340, 484, 13, 70, "ExampleText", "ExpressionUUID" -> \
+"e9b36b76-a1b9-4445-afed-e78693b217a4",
+ CellID->39329498],
+Cell[CellGroupData[{
+Cell[13048, 357, 387, 9, 70, "Input", "ExpressionUUID" -> \
+"d2f6616f-89be-457f-839a-c46bd6868755",
+ CellID->181930319],
+Cell[13438, 368, 1458, 29, 70, "Output", "ExpressionUUID" -> \
+"f663dd64-e111-43d8-8e80-de1665c7a99b",
+ CellID->622380676]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14933, 402, 167, 3, 70, "Input", "ExpressionUUID" -> \
+"0e62e663-b06d-4cab-ba27-dab6ec705643",
+ CellID->122005935],
+Cell[15103, 407, 217, 5, 35, "Output", "ExpressionUUID" -> \
+"805df638-b05c-437f-8bf2-fb9bbf52acbf",
+ CellID->636555836]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15381, 419, 300, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"87ed5528-897e-473c-8e96-5f4a68aeb670",
+ CellID->1293636265],
+Cell[15684, 428, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"9345794f-f646-44a3-9965-04f87d61d179",
+ CellID->293700631],
+Cell[15865, 433, 559, 14, 70, "ExampleText", "ExpressionUUID" -> \
+"968729a0-56a4-425e-9978-2305233c942c",
+ CellID->812887425],
+Cell[CellGroupData[{
+Cell[16449, 451, 329, 8, 70, "Input", "ExpressionUUID" -> \
+"1d327eb5-2212-4118-bfc7-87ba5d7c5223",
+ CellID->62495013],
+Cell[16781, 461, 1165, 25, 70, "Output", "ExpressionUUID" -> \
+"c32e60a0-a04a-4cad-a9db-0104f5ceefee",
+ CellID->6252959]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17983, 491, 167, 3, 70, "Input", "ExpressionUUID" -> \
+"45eb58cf-f245-498f-b1ca-07897a1e6b52",
+ CellID->236896672],
+Cell[18153, 496, 217, 5, 35, "Output", "ExpressionUUID" -> \
+"6b391fb0-d16c-4a00-a16e-c5799bd1b7e9",
+ CellID->377903854]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18407, 506, 427, 10, 70, "Input", "ExpressionUUID" -> \
+"e261d244-d355-4e7c-8890-3e07212d5736",
+ CellID->97676732],
+Cell[18837, 518, 1396, 30, 70, "Output", "ExpressionUUID" -> \
+"2dadfd1e-7fda-4275-bf23-a328d3a4a3b0",
+ CellID->151590466]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20270, 553, 167, 3, 70, "Input", "ExpressionUUID" -> \
+"ae4c585a-8b73-4408-b726-cdeb382a4c46",
+ CellID->177111117],
+Cell[20440, 558, 215, 5, 35, "Output", "ExpressionUUID" -> \
+"3754b4cc-7203-4631-9dca-2e4f7ec1d97d",
+ CellID->4603504]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[20704, 569, 323, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"63cf4da7-58f4-494a-b0d4-0b78506c1652",
+ CellID->1020263627],
+Cell[21030, 578, 177, 3, 70, "Input", "ExpressionUUID" -> \
+"9bda785e-c380-40dc-af48-510da506e4fe",
+ CellID->65841665],
+Cell[21210, 583, 175, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"0fd9cdfc-b4cd-48c2-a0a0-34645df2bd06",
+ CellID->239605270],
+Cell[CellGroupData[{
+Cell[21410, 590, 216, 4, 70, "Input", "ExpressionUUID" -> \
+"d0fd8732-75ad-498b-8d58-5cdd1de2738f",
+ CellID->27055248],
+Cell[21629, 596, 216, 5, 35, "Output", "ExpressionUUID" -> \
+"a29723be-bb52-4d02-8865-b5f3b116b392",
+ CellID->351664650]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[21894, 607, 317, 7, 70, "ExampleSection", "ExpressionUUID" -> \
+"74ca190c-ed89-4f54-8a9d-a3435038f969",
+ CellID->2123667759],
+Cell[22214, 616, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"8d8a2323-adda-45f0-b1b1-25e85f2ec87e",
+ CellID->406673074],
+Cell[22395, 621, 169, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"c470e1fc-5e49-4e2c-9317-0102f3e782b2",
+ CellID->575477310],
+Cell[22567, 626, 1283, 26, 70, "Input", "ExpressionUUID" -> \
+"154d8328-d904-4ced-8c13-e372c19c3586",
+ CellID->548368704],
+Cell[CellGroupData[{
+Cell[23875, 656, 165, 3, 70, "Input", "ExpressionUUID" -> \
+"4cbfbf41-101b-4b84-893e-ea9c027d6af2",
+ CellID->6639560],
+Cell[24043, 661, 216, 5, 35, "Output", "ExpressionUUID" -> \
+"02748d1b-3030-4ca0-8669-d84f93741957",
+ CellID->731941808]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24296, 671, 161, 3, 70, "Input", "ExpressionUUID" -> \
+"3e9d76cd-a649-4707-8273-ecc0d63f1e78",
+ CellID->404905900],
+Cell[24460, 676, 214, 5, 35, "Output", "ExpressionUUID" -> \
+"20d78f4b-0b4f-498c-b3ab-e40595091ad2",
+ CellID->4620519]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24711, 686, 165, 3, 70, "Input", "ExpressionUUID" -> \
+"db344f9d-05f0-452a-bb8d-df097d84b1dc",
+ CellID->966548910],
+Cell[24879, 691, 216, 5, 35, "Output", "ExpressionUUID" -> \
+"6f43015b-d07d-47ab-b992-6703b2878147",
+ CellID->733484762]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25132, 701, 242, 5, 70, "ExampleDelimiter", "ExpressionUUID" -> \
+"c3528a39-d3de-486e-8eeb-9be21040208e",
+ CellID->124851216],
+Cell[25377, 708, 178, 3, 70, "Input", "ExpressionUUID" -> \
+"b040191c-2bea-46b0-be5c-d93a8574097f",
+ CellID->161171731],
+Cell[25558, 713, 167, 3, 70, "ExampleText", "ExpressionUUID" -> \
+"6536bf18-2526-40fc-a486-000c4137f121",
+ CellID->43894502],
+Cell[CellGroupData[{
+Cell[25750, 720, 270, 6, 70, "Input", "ExpressionUUID" -> \
+"edd0b87c-b00d-41f8-b2ca-81d7ca9d31e8",
+ CellID->141107876],
+Cell[26023, 728, 2369, 43, 70, "Output", "ExpressionUUID" -> \
+"6995698b-f4de-41e7-9a2a-e0d93168bd68",
+ CellID->141782328]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28429, 776, 346, 9, 70, "Input", "ExpressionUUID" -> \
+"cdf6ebbe-8bc8-414f-b5a0-e0e36e27fcb8",
+ CellID->19559512],
+Cell[28778, 787, 213, 5, 35, "Output", "ExpressionUUID" -> \
+"31b7c6d0-2e87-402b-baf9-0e346c804fee",
+ CellID->260971820]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[29030, 797, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"d32a84be-467e-457b-b76a-3b9afb650513"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29153, 802, 402, 13, 70, "SeeAlsoSection", "ExpressionUUID" -> \
+"8b109ef0-08e7-4fab-9b93-eaf9c2e6b309",
+ CellID->1255426704],
+Cell[29558, 817, 391, 10, 70, "SeeAlso", "ExpressionUUID" -> \
+"8b6383f0-41f3-49da-8e4e-bad498153741",
+ CellID->396566460]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29986, 832, 404, 13, 70, "TutorialsSection", "ExpressionUUID" -> \
+"790ad637-cb36-4cf6-85d2-a7b2fcb05523",
+ CellID->250839057],
+Cell[30393, 847, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"506742f4-4597-42a7-b730-94b5e7088368"],
+Cell[30482, 849, 263, 6, 70, "Tutorials", "ExpressionUUID" -> \
+"9b119e3d-5b8c-4d42-8e06-ceb51af14148",
+ CellID->341631938],
+Cell[30748, 857, 86, 0, 70, "SectionFooterSpacer", "ExpressionUUID" -> \
+"eaf5ff8f-8b63-4313-85dc-2d553b07df11"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30871, 862, 408, 13, 70, "MoreAboutSection", "ExpressionUUID" -> \
+"d4040035-2f54-4925-b84d-e470ef55fdf7",
+ CellID->38303248],
+Cell[31282, 877, 86, 0, 70, "SectionHeaderSpacer", "ExpressionUUID" -> \
+"e78eadd2-49b3-4f9c-a909-ba91080cf10d"],
+Cell[31371, 879, 259, 6, 70, "MoreAbout", "ExpressionUUID" -> \
+"59433927-421c-4ca0-b1da-74e094bf2df2",
+ CellID->15154703]
+}, Open  ]],
+Cell[31645, 888, 78, 0, 70, "FooterCell", "ExpressionUUID" -> \
+"3e42fcda-b467-45a4-a181-9913596eb9c6"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
