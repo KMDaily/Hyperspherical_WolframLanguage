@@ -1,2 +1,2 @@
-# Hyperspherical_Mathematica
-Introduces a framework for making non-canonical hyperspherical coordinate systems.
+# Hyperspherical_WolframLanguage
+Introduces a framework for making non-canonical hyperspherical coordinate systems in the Wolfram Language.
